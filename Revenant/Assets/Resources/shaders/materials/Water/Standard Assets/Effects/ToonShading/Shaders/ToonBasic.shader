@@ -41,7 +41,7 @@ Shader "Toon/Basic" {
 				float2 texcoord : TEXCOORD0;
 				float3 cubenormal : TEXCOORD1;
 				float2 uv : TEXCOORD2;
-				UNITY_FOG_COORDS(2)
+				UNITY_FOG_COORDS(3)
 			};
 
 			
