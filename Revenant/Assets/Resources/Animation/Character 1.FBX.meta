@@ -253,9 +253,14 @@ ModelImporter:
     9500000: //RootNode
     13700000: Object001
     13700002: Revenant_Girl
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 10 - Default
+    second: {fileID: 2100000, guid: 8085ea15dff650e428a3b07d38f30142, type: 2}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1

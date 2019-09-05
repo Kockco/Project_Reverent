@@ -21,7 +21,7 @@ Material:
     m_TexEnvs: []
     m_Floats:
     - _DirectionPitch: 0
-    - _DirectionYaw: 0
+    - _DirectionYaw: 27
     - _Exponent: 1
     - _Intensity: 1
     m_Colors:
