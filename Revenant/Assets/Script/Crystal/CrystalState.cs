@@ -25,19 +25,19 @@ public class CrystalState : MonoBehaviour
         switch (stat)
         {
             case C_STATE.BLUE:
-                GetComponent<MeshRenderer>().material = Resources.Load<Material>("Test/Crystal1");
+                GetComponent<MeshRenderer>().material = Resources.Load<Material>("Nature/Trans/Main_Objects/CCrystal/Crystal_Blue");
                 break;
             case C_STATE.WHITE:
-                GetComponent<MeshRenderer>().material = Resources.Load<Material>("Test/Crystal2");
+                GetComponent<MeshRenderer>().material = Resources.Load<Material>("Nature/Trans/Main_Objects/CCrystal/Crystal_White");
                 break;
             case C_STATE.RED:
-                GetComponent<MeshRenderer>().material = Resources.Load<Material>("Test/Crystal3");
+                GetComponent<MeshRenderer>().material = Resources.Load<Material>("Nature/Trans/Main_Objects/CCrystal/Crystal_Red");
                 break;
             case C_STATE.BLACK:
-                GetComponent<MeshRenderer>().material = Resources.Load<Material>("Test/Crystal4");
+                GetComponent<MeshRenderer>().material = Resources.Load<Material>("Nature/Trans/Main_Objects/CCrystal/Crystal_Black");
                 break;
             case C_STATE.EMPTY:
-                GetComponent<MeshRenderer>().material = Resources.Load<Material>("Test/Empty");
+                GetComponent<MeshRenderer>().material = Resources.Load<Material>("Nature/Trans/Main_Objects/CCrystal/Crystal_Empty");
                 break;
         }
     }
