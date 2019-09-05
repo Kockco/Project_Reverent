@@ -5,6 +5,7 @@ using UnityEngine;
 public class CrystalMove : CrystalPuzzle
 {
     public Vector3[] pos;
+    public Vector3[] pos2;
     public Vector3 target;
     private void Start()
     {
@@ -15,10 +16,10 @@ public class CrystalMove : CrystalPuzzle
         {
             pos[i] = transform.position;
         }
-        pos[0].x += 5;
-        pos[1].x -= 5;
-        pos[2].z += 5;
-        pos[3].z -= 5;
+        pos[0].z += pos2[0].z;
+        pos[1].z += pos2[1].z;
+        pos[2].x += pos2[2].x;
+        pos[3].x += pos2[3].x;
         target = pos[4];
     }
     private void Update()
