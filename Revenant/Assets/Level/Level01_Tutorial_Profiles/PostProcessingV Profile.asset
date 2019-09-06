@@ -20,6 +20,7 @@ MonoBehaviour:
   - {fileID: 114812029567601638}
   - {fileID: 114095932754920116}
   - {fileID: 114553194444942430}
+  - {fileID: 114481848970807074}
 --- !u!114 &114095932754920116
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -62,6 +63,40 @@ MonoBehaviour:
     value: {fileID: 0}
     defaultState: 1
   opacity:
+    overrideState: 0
+    value: 1
+--- !u!114 &114481848970807074
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b77c5407dc277943b591ade9e6b18c5, type: 3}
+  m_Name: LensDistortion
+  m_EditorClassIdentifier: 
+  active: 0
+  enabled:
+    overrideState: 1
+    value: 1
+  intensity:
+    overrideState: 0
+    value: 0
+  intensityX:
+    overrideState: 0
+    value: 1
+  intensityY:
+    overrideState: 0
+    value: 1
+  centerX:
+    overrideState: 0
+    value: 0
+  centerY:
+    overrideState: 0
+    value: 0
+  scale:
     overrideState: 0
     value: 1
 --- !u!114 &114486194347400044
@@ -125,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94fcd11afffcb142908bfcb1e261fba, type: 3}
   m_Name: MotionBlur
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1

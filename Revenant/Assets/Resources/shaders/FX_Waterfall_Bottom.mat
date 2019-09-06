@@ -31,15 +31,15 @@ Material:
     - _BrightNess: 1.26
     - _EdgeWidth: 0.01
     - _Foam: 10
-    - _HorSpeed: -0.03
-    - _NoiseScale: 0.01
+    - _HorSpeed: 0.03
+    - _NoiseScale: 0
     - _RIM: 1
     - _RimPower: 10.4
     - _Softness: 0
     - _TopScale: 0.01
     - _TopSpread: 0.05
     - _VERTEX: 1
-    - _VertSpeed: 6.9
+    - _VertSpeed: 0.2
     m_Colors:
     - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimColor: {r: 0, g: 0.5, b: 0.24999997, a: 1}
