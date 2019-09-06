@@ -1,13 +1,13 @@
 ﻿Shader "Toon/Iridescent Mask" {
 	Properties{
-		_Color("Main Color", Color) = (0.5,0.5,0.5,1)
+		[HDR]_Color("Main Color", Color) = (0.5,0.5,0.5,1)
 		_MainTex("Base (RGB)", 2D) = "white" {}
 		_BumpMap("Normal Map", 2D) = "bump" {}
 		_Noise("Noise (RGB)", 2D) = "white" {} // noise texture
 		_Mask("Iri Mask (RGB)", 2D) = "white" {} // mask texture
 		_Ramp("Toon Ramp (RGB)", 2D) = "gray" {}
 		_IrTex("Iridescence Ramp (RGB)", 2D) = "white" {} // color ramp
-		_IrColor("Iri Tint", Color) = (0.5,0.5,0.5,1)// extra iridescence tinting
+		[HDR]_IrColor("Iri Tint", Color) = (0.5,0.5,0.5,1)// extra iridescence tinting
 		_Offset("Mask Cutoff", Range(0, 1)) = 1 // offset of the color ramp
 		_Brightness("Iridescence Opacity", Range(0, 2)) = 1 // opacity of iridescence
 		_WorldScale("Noise Worldscale", Range(.002, 5)) = 1 // noise scale

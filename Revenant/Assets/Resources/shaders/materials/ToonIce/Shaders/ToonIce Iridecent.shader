@@ -1,6 +1,6 @@
 Shader "Toon/Iridescent Bump" {
 	Properties{
-		_Color("Main Color", Color) = (0.5,0.5,0.5,1)
+	[HDR]	_Color("Main Color", Color) = (0.5,0.5,0.5,1)
 		_MainTex("Base (RGB)", 2D) = "white" {}
 		_BumpMap("Normal Map", 2D) = "bump" {}
 		_Noise("Noise (RGB)", 2D) = "white" {} // noise texture
