@@ -9,8 +9,8 @@ public class CrystalStairs : CrystalPuzzle
     {
         c_state = GetComponent<EmptyCrystal>();
         c_state.state = C_STATE.EMPTY;
-        stairs = new GameObject[4];
-        for (int i = 0; i < 4; i++)
+        stairs = new GameObject[4]; 
+        for (int i = 0; i < 4 /*stairs.length*/; i++)
             stairs[i] = transform.GetChild(i).gameObject;
     }
     private void Update()
@@ -34,26 +34,26 @@ public class CrystalStairs : CrystalPuzzle
             case C_STATE.BLUE:
                 StairsArrive(stairs[0]);
                 stairs[0].SetActive(true);
-                if (stairs[0].transform.position.y <=1f)
-                stairs[0].transform.Translate(0,5 * Time.deltaTime, 0);
+                if (stairs[0].transform.position.y <= 0) // (이부분 수정함 땃쥐야)
+                stairs[0].transform.Translate(0, 10 * Time.deltaTime, 0);
                 break;
             case C_STATE.WHITE:
                 StairsArrive(stairs[1]);
                 stairs[1].SetActive(true);
-                if (stairs[1].transform.position.y <= 1f)
-                    stairs[1].transform.Translate(0, 5 * Time.deltaTime, 0);
+                if (stairs[1].transform.position.y <= 0)// (이부분 수정함 땃쥐야)
+                    stairs[1].transform.Translate(0, 2 * Time.deltaTime, 0);
                 break;
             case C_STATE.RED:
                 StairsArrive(stairs[2]);
                 stairs[2].SetActive(true);
-                if (stairs[2].transform.position.y <= 1f)
-                    stairs[2].transform.Translate(0, 5 * Time.deltaTime, 0);
+                if (stairs[2].transform.position.y <= 0)// (이부분 수정함 땃쥐야)
+                    stairs[2].transform.Translate(0, 2 * Time.deltaTime, 0);
                 break;
             case C_STATE.BLACK:
                 StairsArrive(stairs[3]);
                 stairs[3].SetActive(true);
-                if (stairs[3].transform.position.y <= 1f)
-                    stairs[3].transform.Translate(0, 5 * Time.deltaTime, 0);
+                if (stairs[3].transform.position.y <= 0)// (이부분 수정함 땃쥐야)
+                    stairs[3].transform.Translate(0, 2 * Time.deltaTime, 0);
                 break;
         }
     }
