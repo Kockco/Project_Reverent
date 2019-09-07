@@ -2,7 +2,7 @@
 Shader "Toon/Ice Effect" {
 
 	Properties{
-		[HDR] _Color("Main Color", Color) = (0.49, 0.94, 0.64, 1)
+		_Color("Main Color", Color) = (0.49,0.94,0.64,1)
 		_TColor("Top Color", Color) = (0.49,0.94,0.64,1)
 		_BottomColor("Bottom Color", Color) = (0.23,0,0.95,1)
 		_Ramp("Toon Ramp (RGB)", 2D) = "gray" {}
@@ -57,7 +57,7 @@ Shader "Toon/Ice Effect" {
 		
 	
 		
-//		
+
 		o.Albedo = _Color *pow(innerRim, 0.7)*lerp(_BottomColor, _TColor, saturate(localPos.y + _Offset )) ;
 		o.Alpha = 1;
 #if ALPHA

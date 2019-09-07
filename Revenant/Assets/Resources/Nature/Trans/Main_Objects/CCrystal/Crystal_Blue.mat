@@ -39,24 +39,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _IrTex:
-        m_Texture: {fileID: 2800000, guid: 16efb17ea6ddafd47aab66bae3989e7b, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 983ff908c6a56994fb45e47327a57b57, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Mask:
-        m_Texture: {fileID: 2800000, guid: e182ac5d3b797044fb29f3fa2acc3708, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Noise:
-        m_Texture: {fileID: 2800000, guid: 50f5bfbaf5f024c409813bdac16a6237, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -68,12 +56,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Ramp:
-        m_Texture: {fileID: 2800000, guid: 85f5cc7d233c9a34186cc7c5b7285197, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0dd0a8dcbccd7794f9555474da432e26, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _ALPHA: 0
-    - _Brightness: 0.22
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -81,25 +68,19 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _LM: 0
-    - _LM2: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Offset: 0.15
+    - _Offset: 3.2
     - _Parallax: 0.02
-    - _RimBrightness: 3
+    - _RimBrightness: 3.2
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _Value: 1
-    - _Value2: 2
-    - _WorldScale: 1.7
     - _ZWrite: 1
     m_Colors:
     - _BottomColor: {r: 0.75133497, g: 0.7893339, b: 0.7924528, a: 1}
-    - _Color: {r: 0.30190194, g: 0.6572421, b: 2.3704891, a: 1}
+    - _Color: {r: 0.5707547, g: 0.7615304, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _IrColor: {r: 1, g: 1, b: 1, a: 1}
     - _TColor: {r: 0.25858846, g: 0.34362763, b: 0.3679245, a: 1}

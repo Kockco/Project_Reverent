@@ -41,7 +41,7 @@ Shader "Toon/Basic" {
 				float2 texcoord : TEXCOORD0;
 				float3 cubenormal : TEXCOORD1;
 				float2 uv : TEXCOORD2;
-			//	UNITY_FOG_COORDS(2)
+				UNITY_FOG_COORDS(2)
 			};
 
 			
@@ -53,7 +53,7 @@ Shader "Toon/Basic" {
 				o.pos = UnityObjectToClipPos (v.vertex);
 				o.texcoord = TRANSFORM_TEX(v.texcoord, _MainTex);
 				o.cubenormal = mul (UNITY_MATRIX_MV, float4(v.normal,0));
-		//		UNITY_TRANSFER_FOG(o,o.pos);
+				UNITY_TRANSFER_FOG(o,o.pos);
 				return o;
 			}
 			
@@ -64,7 +64,7 @@ Shader "Toon/Basic" {
 				fixed4 col = _Color * tex2D(_MainTex, i.texcoord);
 				fixed4 cube = texCUBE(_ToonShade, i.cubenormal);
 				fixed4 c = fixed4(2.0f * cube.rgb * col.rgb, col.a);
-			//	UNITY_APPLY_FOG(i.fogCoord, c);
+				UNITY_APPLY_FOG(i.fogCoord, c);
 			//	half3 tnormal = UnpackNormal(tex2D(_BumpMap, i.uv));
 				return c;
 			}
