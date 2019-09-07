@@ -4,6 +4,7 @@
 	{
 		_Color("Color", Color) = (1,1,1,1)
 		_MainTex("Main Texture", 2D) = "white" {}
+		_BumpMap("Normal Map", 2D) = "bump" {}
 	// Ambient light is applied uniformly to all surfaces on the object.
 	[HDR]
 	_AmbientColor("Ambient Color", Color) = (0.4,0.4,0.4,1)
@@ -61,7 +62,7 @@
 				SHADOW_COORDS(2)
 			};
 
-			sampler2D _MainTex;
+			sampler2D _MainTex, _BumpMap;
 			float4 _MainTex_ST;
 
 			v2f vert(appdata v)
@@ -89,7 +90,8 @@
 			float _RimThreshold;
 
 			float4 frag(v2f i) : SV_Target
-			{
+			{ 
+				half3 tnormal = UnpackNormal(tex2D(_BumpMap, i.uv));
 				float3 normal = normalize(i.worldNormal);
 				float3 viewDir = normalize(i.viewDir);
 
