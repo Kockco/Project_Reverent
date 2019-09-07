@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Crystal_Empty
-  m_Shader: {fileID: 4800000, guid: bc8ccb75ecb64c948a10a511ee77c79f, type: 3}
+  m_Shader: {fileID: 4800000, guid: fbc0807e2e1bbb94d96cab3e6c5d94f9, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -39,12 +39,24 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _IrTex:
+        m_Texture: {fileID: 2800000, guid: 16efb17ea6ddafd47aab66bae3989e7b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
+        m_Texture: {fileID: 2800000, guid: e09e3ae4668aa3246bed4b7210084157, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Noise:
+        m_Texture: {fileID: 2800000, guid: 799ad8ec365f7074e9482d4e182db6db, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -56,11 +68,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Ramp:
-        m_Texture: {fileID: 2800000, guid: 0da56cfce118d6a43bb1e4465bcd1dc4, type: 3}
+        m_Texture: {fileID: 2800000, guid: 953aee88aa8b49347a6abd3be0f0eb54, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _ALPHA: 0
+    - _Brightness: 2
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -68,19 +81,25 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _LM: 0
+    - _LM2: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Offset: 4
+    - _Offset: 0
     - _Parallax: 0.02
-    - _RimBrightness: 3
+    - _RimBrightness: 4
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
+    - _Value: 1
+    - _Value2: 2.5
+    - _WorldScale: 1.3
     - _ZWrite: 1
     m_Colors:
-    - _BottomColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Color: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
+    - _BottomColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1.4473344, g: 1.4473344, b: 1.4473344, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _TColor: {r: 0.4174528, g: 0.48520356, b: 0.5, a: 1}
+    - _IrColor: {r: 1, g: 1, b: 1, a: 1}
+    - _TColor: {r: 0.09638661, g: 0.3584906, b: 0.32475862, a: 1}

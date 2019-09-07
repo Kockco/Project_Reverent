@@ -39,7 +39,7 @@ public class CrystalRotation : CrystalPuzzle
         c_state.state = C_STATE.EMPTY;
 
         parent = transform.parent;
-        movingTime = 1;
+        //movingTime = 1;
         myTime = 0;
         state = STATE.NORMAL;
         //왼쪽 오른쪽 최대 지점을 정하고 구간계산
