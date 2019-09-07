@@ -69,8 +69,8 @@ Material:
     - _Parallax: 0.02
     - _SrcBlend: 1
     - _SunDisk: 2
-    - _SunSize: 0.058
-    - _SunSizeConvergence: 5
+    - _SunSize: 0.08
+    - _SunSizeConvergence: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:

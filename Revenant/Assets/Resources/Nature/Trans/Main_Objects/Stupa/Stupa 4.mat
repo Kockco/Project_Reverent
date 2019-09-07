@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Stupa 4
-  m_Shader: {fileID: 4800000, guid: 48dca5b99d113b8d11006bab44295342, type: 3}
+  m_Shader: {fileID: 4800000, guid: f4d58149117bc614e92e722a6ed7ee09, type: 3}
   m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 12e9f059a170b9248a9ba9c7beba4b1c, type: 3}
+        m_Texture: {fileID: 2800000, guid: a1c3bdcd546284b4785303a96258829f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpTex:
@@ -47,20 +47,36 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _IrTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Leaves_NoiseTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: d6538cd68bcc8374f97c85e793244b95, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 2.82, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Mask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 2800000, guid: 77fca8c02e728494a8a7c23a6b3929ee, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Noise:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 2800000, guid: a1c3bdcd546284b4785303a96258829f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -72,7 +88,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Ramp:
-        m_Texture: {fileID: 2800000, guid: 77fca8c02e728494a8a7c23a6b3929ee, type: 3}
+        m_Texture: {fileID: 2800000, guid: d440902fad11e807d00044888d76c639, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ToonShade:
@@ -92,6 +108,7 @@ Material:
     - _Big_Wave: 0
     - _Big_WindAmount: 1
     - _Big_Windspeed: 0
+    - _Brightness: 2
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -101,12 +118,17 @@ Material:
     - _GlossyReflections: 1
     - _GradientHeight: 10
     - _GradientYStartPos: 0
+    - _HighlightOffset: 0.5
+    - _LM: 0
+    - _LM2: 0
     - _LightmapPower: 0.5
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _Offset: 1
     - _Outline: 0.1
     - _Parallax: 0.02
+    - _RimPower: 0
     - _RotationX: 0
     - _RotationY: 0
     - _RotationZ: 0
@@ -127,7 +149,10 @@ Material:
     - _TranslationX: 0
     - _TranslationY: 0
     - _UVSec: 0
+    - _Value: 1
+    - _Value2: 2
     - _WaveSpeed: 50
+    - _WorldScale: 1
     - _ZWrite: 1
     - __dirty: 1
     m_Colors:
@@ -135,11 +160,13 @@ Material:
     - _BackBottomColor: {r: 0.4528302, g: 0.4528302, b: 0.33107868, a: 0}
     - _BackTopColor: {r: 0.6226415, g: 0.6226415, b: 0.41998932, a: 0}
     - _BottomColor: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 0}
-    - _Color: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
+    - _Color: {r: 0.8396226, g: 0.67222893, b: 0.4000089, a: 1}
     - _ColorTint: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FrontBottomColor: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 0}
     - _FrontTopColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 0}
+    - _HiColor: {r: 1, g: 1, b: 1, a: 1}
+    - _IrColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _LeftBottomColor: {r: 0.46226418, g: 0.32053223, b: 0.46226418, a: 0}
     - _LeftTopColor: {r: 0.5, g: 0.36084905, b: 0.5, a: 0}
     - _LightTint: {r: 1, g: 1, b: 1, a: 0}
@@ -147,5 +174,7 @@ Material:
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _RightBottomColor: {r: 0.4033019, g: 0.4033019, b: 0.5, a: 0}
     - _RightTopColor: {r: 0.3762905, g: 0.3762905, b: 0.5283019, a: 0}
+    - _RimColor: {r: 0.49056602, g: 0.380961, b: 0.27536488, a: 1}
+    - _SpecuColor: {r: 0.8, g: 0.45, b: 0.19999996, a: 1}
     - _Specular: {r: 1, g: 1, b: 1, a: 1}
     - _TopColor: {r: 1, g: 1, b: 1, a: 0}
