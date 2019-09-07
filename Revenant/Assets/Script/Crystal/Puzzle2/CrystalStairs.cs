@@ -60,7 +60,7 @@ public class CrystalStairs : CrystalPuzzle
 
     void StairsArrive(GameObject stair)
     {
-        if(stair.transform.position.y >=1f)
+        if(stair.transform.position.y >= 0f)
         {
             c_state.isActive = false;
         }
