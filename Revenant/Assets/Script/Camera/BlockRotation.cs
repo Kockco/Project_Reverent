@@ -22,7 +22,6 @@ public class BlockRotation : MonoBehaviour
             transform.position = new Vector3(transform.position.x,target.position.y,transform.position.z);
         else
             transform.position = new Vector3(transform.position.x, pos.y, transform.position.z);
-
         //transform.rotation = Quaternion.Euler(transform.parent.rotation.x, transform.parent.rotation.y, transform.parent.rotation.z);
     }
 }
