@@ -10,13 +10,15 @@
         _MaxWidth("Max Displacement Width", Range(0, 2)) = 0.1 // width of the line around the dissolve 
 		_RadiusColor ("Radius Tint", Color) = (0.5,0.5,0.5,1)
 		_Tinting("Tinting Strength", Range(-2,2)) = 0.4 // width of the line around the dissolve
+		_Fade("Fade", Range(0, 1)) = 1
     }
  
     SubShader {
-        Tags { "RenderType"="Opaque" "DisableBatching" = "True" }// disable batching lets us keep object space
+		Tags { "RenderType" = "Transparent"  "Queue" = "Transparent" }
+		///"DisableBatching" = "True" }// disable batching lets us keep object space
         LOD 200
         Blend SrcAlpha OneMinusSrcAlpha
- 
+		
        
 CGPROGRAM
 #pragma surface surf ToonRamp vertex:vert addshadow keepalpha // addshadow applies shadow after vertex animation
@@ -46,6 +48,7 @@ float4 _Color;
 float _Radius;
 float _Tinting;
 float4 _RadiusColor;
+fixed _Fade;
  
 float _Speed;
 float _SwayMax;
@@ -83,7 +86,7 @@ void vert(inout appdata_full v)//
 }
  
 void surf (Input IN, inout SurfaceOutput o) {
-    half4 c = tex2D(_MainTex, IN.uv_MainTex) * _Color;
+    half4 c = tex2D(_MainTex, IN.uv_MainTex) ;
 
 	float3 tint;
    // interaction radius movement for every position in array
@@ -95,7 +98,7 @@ void surf (Input IN, inout SurfaceOutput o) {
     }
 	
     o.Albedo = (c.rgb * (1- tint)) + ((tint * _Tinting)* _RadiusColor);
-    o.Alpha = c.a;
+    o.Alpha = c.a* _Fade;
 }
 ENDCG
  

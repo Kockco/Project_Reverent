@@ -31,7 +31,7 @@ Material:
     - _BrightNess: 1.26
     - _EdgeWidth: 1.05
     - _Foam: 5.8
-    - _HorSpeed: -0.1
+    - _HorSpeed: 0.02
     - _NoiseScale: 0.01
     - _RIM: 0
     - _RimPower: 8.6
