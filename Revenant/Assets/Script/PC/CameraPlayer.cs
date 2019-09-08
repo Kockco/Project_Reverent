@@ -15,7 +15,7 @@ public class CameraPlayer : MonoBehaviour
     Vector3 mouseMove;
     Transform cameraParentTransform;
 
-    bool topView;
+    public bool topView;
 
     [Header("캐릭터 크기 조정")]
     [Range(0, 5)]
