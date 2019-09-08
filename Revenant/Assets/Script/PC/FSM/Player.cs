@@ -25,8 +25,11 @@ public class Player : MonoBehaviour
     CharacterController cc;
 
     public float myY;
+    public bool jumpKey;
+    public float jumpDelay;
     private void Awake()
     {
+        
         //Start idleState
         SetState(new PlayerIdleState());
 
@@ -38,6 +41,7 @@ public class Player : MonoBehaviour
         model = transform.GetChild(0);
         cameraTransform = Camera.main.transform.parent;
         myTransform = transform;
+        jumpKey = false;
     }
 
     private void Update()
@@ -47,7 +51,7 @@ public class Player : MonoBehaviour
 
         cc.Move(move * Time.deltaTime);
 
-        Debug.Log("점프높이" + (transform.position.y - myY));
+        //Debug.Log("점프높이" + (transform.position.y - myY));
     }
 
     public void SetState(PlayerState nextState)
@@ -116,14 +120,30 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            //SetState(new PlayerAirborne());
+            transform.GetChild(0).GetComponent<Animator>().SetBool("Jump",true);
+            jumpKey = true;
+            jumpDelay = 0;
+        }
+        if(jumpKey)
+            JumpDelay();
+    }
+    public void JumpDelay()
+    {
+        jumpDelay += Time.deltaTime;
+        if(jumpDelay > 0.3f)
+        {
             yVelocity = jumpPower;
             myY = transform.position.y;
+            jumpKey = false;
+            jumpDelay = 0;
+            SetState(new PlayerJumpState());
         }
+    }
+    public void Gravity()
+    {
         move.y = yVelocity;
         if (yVelocity > -19)
-            yVelocity -= gravity * 3 * Time.deltaTime;
-        
+            yVelocity -= gravity *3* Time.deltaTime;
     }
     
     public void PlayerAnimation(string aniName) { model.GetComponent<Animator>().SetTrigger(aniName); }
