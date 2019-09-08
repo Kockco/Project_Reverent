@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Grass
+  m_Name: Vine
   m_Shader: {fileID: 4800000, guid: 1362bf058c2f46649bf7873cbf33222c, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c0a7182a73d99174aa64a2161cae3587, type: 3}
+        m_Texture: {fileID: 2800000, guid: bafb96ad4648024499f89805c9241537, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -76,7 +76,7 @@ Material:
     - _GlossyReflections: 1
     - _Intensity: 1.27
     - _LIGHTMAP: 0
-    - _MaxWidth: 0.36
+    - _MaxWidth: 1.16
     - _Metallic: 0
     - _Mode: 0
     - _NScale: 5.11
@@ -84,22 +84,22 @@ Material:
     - _Parallax: 0.02
     - _Radius: 0.49
     - _Rigidness: 1
-    - _Shadow: 1.42
+    - _Shadow: 0.4
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Speed: 28
+    - _Speed: 20
     - _SrcBlend: 1
-    - _SwayMax: 0.1
-    - _Tinting: 0.53
+    - _SwayMax: 0.0199
+    - _Tinting: -0.55
     - _UVSec: 0
     - _VerticalFallOff: 0.39
     - _Width: 0.21
-    - _YOffset: 0.38
+    - _YOffset: -0.08
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.40630502, g: 0.5660378, b: 0.35510862, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DisLineColor: {r: 1, g: 1, b: 1, a: 1}
     - _DisLineColorEx: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RadiusColor: {r: 0.55450714, g: 0.014462441, b: 0.6132076, a: 1}
-    - _ShadowColor: {r: 0.16470587, g: 0.4706489, b: 1, a: 1}
+    - _RadiusColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _ShadowColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
