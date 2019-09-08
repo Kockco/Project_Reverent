@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Portal
-  m_Shader: {fileID: 4800000, guid: fbc0807e2e1bbb94d96cab3e6c5d94f9, type: 3}
+  m_Name: Crystal_Empty 1
+  m_Shader: {fileID: 4800000, guid: f4d58149117bc614e92e722a6ed7ee09, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: e86937c151cc28a418b4a43f414b2132, type: 3}
+        m_Texture: {fileID: 2800000, guid: fb74502da8f3a7f4baeddd2b3ed78e0f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -40,11 +40,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _IrTex:
-        m_Texture: {fileID: 2800000, guid: d440902fad11e807d00044888d76c639, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8723a17f945ae1b40ade1da49a189d8f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 7c3611860f6cfbe4ab1141c09704ee62, type: 3}
+        m_Texture: {fileID: 2800000, guid: 657655b702b17eb4e9ab495a722e890f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Mask:
@@ -52,15 +52,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 9a87109436ce0a8498f6318339a52413, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Noise:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Normal:
-        m_Texture: {fileID: 2800000, guid: e86937c151cc28a418b4a43f414b2132, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -72,16 +68,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Ramp:
-        m_Texture: {fileID: 2800000, guid: d440902fad11e807d00044888d76c639, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ToonShade:
-        m_Texture: {fileID: 8900000, guid: b995d4bd9d11078d11005b9844295342, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0da56cfce118d6a43bb1e4465bcd1dc4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _ALPHA: 0
-    - _Brightness: 0.3
+    - _Brightness: 1
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -89,17 +81,14 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _HighlightOffset: 1
     - _LM: 0
     - _LM2: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Offset: 0.02
-    - _Outline: 0.005
+    - _Offset: 0.55
     - _Parallax: 0.02
-    - _RimBrightness: 3.2
-    - _RimPower: 20
+    - _RimBrightness: 3
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -109,12 +98,8 @@ Material:
     - _WorldScale: 1
     - _ZWrite: 1
     m_Colors:
-    - _BottomColor: {r: 0.22999996, g: 0, b: 0.95, a: 1}
-    - _Color: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
+    - _BottomColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Color: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HiColor: {r: 0, g: 0, b: 0, a: 1}
     - _IrColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecuColor: {r: 0, g: 0, b: 0, a: 1}
-    - _TColor: {r: 0.49, g: 0.94, b: 0.6399999, a: 1}
+    - _TColor: {r: 0.4174528, g: 0.48520356, b: 0.5, a: 1}
