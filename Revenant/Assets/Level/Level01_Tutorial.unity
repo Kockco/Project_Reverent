@@ -13682,6 +13682,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 290127186}
+  - component: {fileID: 290127192}
+  - component: {fileID: 290127191}
   - component: {fileID: 290127190}
   - component: {fileID: 290127189}
   - component: {fileID: 290127188}
@@ -13829,6 +13831,45 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &290127191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290127185}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03bce41bbecf51d4c9a5a02aaad59f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera_width: -10
+  camera_height: 4
+  camera_fix: 3
+--- !u!114 &290127192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290127185}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17b0093ccaf75ca4fbf7d9d3ef5479e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTransform: {fileID: 1503507115}
+  isMoving: 0
+  CamOffset: {x: 0, y: 0, z: 0}
+  ZoomOffset: {x: 0, y: 0, z: 0}
+  senstivityX: 5
+  senstivityY: 1
+  minY: 30
+  maxY: 50
+  isZooming: 0
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &292233210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73757,13 +73798,15 @@ MonoBehaviour:
   myTransform: {fileID: 0}
   gravity: 9.81
   yVelocity: 0
-  runSpeed: 15
+  runSpeed: 4
   jumpPower: 6
   model: {fileID: 0}
   cameraTransform: {fileID: 0}
   staff: {fileID: 0}
   aim: {fileID: 0}
   myY: 0
+  jumpKey: 0
+  jumpDelay: 0
 --- !u!114 &1503507118
 MonoBehaviour:
   m_ObjectHideFlags: 0

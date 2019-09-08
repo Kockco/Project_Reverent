@@ -59,9 +59,9 @@ public class CameraPlayer : MonoBehaviour
         nowDistance = Camera.main.transform.localPosition.z;
         transform.localScale = new Vector3(charSize, charSize, charSize);
 
-
+       
+      
     }
-
     void LateUpdate()
     {
         if(!topView)

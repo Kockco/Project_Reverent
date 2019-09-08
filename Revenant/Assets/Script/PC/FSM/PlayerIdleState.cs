@@ -5,19 +5,28 @@ using UnityEngine;
 public class PlayerIdleState : PlayerState
 {
     private Player player;
+    public float jumpDelay;
 
     void PlayerState.OnEnter(Player player)
     {
         //player 프로퍼티 초기화
         this.player = player;
         // 초기화 구현
+        jumpDelay = 0;
     }
     void PlayerState.Update()
     {
+        Debug.Log((float)jumpDelay);
         // 실행할것 구현
         player.MoveCalc(1.0f);
-        player.move.y -= player.gravity * Time.deltaTime;
-        player.Jump();
+        //player.move.y -= player.gravity * Time.deltaTime;
+        if (jumpDelay < 0.5f)
+            jumpDelay += Time.deltaTime;
+        else
+        {
+            player.Jump();
+        }
+        player.Gravity();
         //GradientCheck();
     }
     void PlayerState.OnExit()
