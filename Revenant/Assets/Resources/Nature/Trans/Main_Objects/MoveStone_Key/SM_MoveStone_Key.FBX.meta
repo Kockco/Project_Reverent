@@ -3,12 +3,19 @@ guid: fd0dc51e6bcaabc448c751dbd315ec9d
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
+    100000: crystal
+    100002: Key_low
+    100004: //RootNode
+    400000: crystal
+    400002: Key_low
+    400004: //RootNode
     2100000: 02 - Default
-    2300000: //RootNode
-    3300000: //RootNode
+    2300000: crystal
+    2300002: Key_low
+    3300000: crystal
+    3300002: Key_low
     4300000: Key_low
+    4300002: crystal
   externalObjects: {}
   materials:
     importMaterials: 1
