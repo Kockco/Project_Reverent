@@ -76,6 +76,8 @@ public class CrystalRotManager : MonoBehaviour
                 {
                     Crystal[0].GetComponent<CrystalRotation>().state = CrystalRotation.STATE.RESET;
                     Crystal[1].GetComponent<CrystalRotation>().state = CrystalRotation.STATE.RESET;
+                    Crystal[0].GetComponent<CrystalRotation>().c_state.state = C_STATE.EMPTY;
+                    Crystal[1].GetComponent<CrystalRotation>().c_state.state = C_STATE.EMPTY;
                 }
                 //다른녀석도 상태를 활성화(항상 동시에 활성화된다)
                 if (i == 0)

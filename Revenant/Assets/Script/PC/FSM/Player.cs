@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
         
         //Start idleState
         SetState(new PlayerIdleState());
-
+        
         staff = GameObject.Find("Staff");
         if (staff == null)
             Debug.Log("PlayerScript Error : staff not find");

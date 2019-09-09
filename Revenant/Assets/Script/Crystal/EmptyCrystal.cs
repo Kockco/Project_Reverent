@@ -10,12 +10,7 @@ public class EmptyCrystal : CrystalState
     void Start()
     {
         LoadMaterial();
-        if(transform.GetChild(1) != null)
-            myMat = transform.GetChild(1).GetComponent<MeshRenderer>();
-        else
-        {
-            myMat = transform.GetComponent<MeshRenderer>();
-        }
+            myMat = transform.GetChild(0).GetComponent<MeshRenderer>();
 
 
         isActive = false;
