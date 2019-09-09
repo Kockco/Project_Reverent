@@ -7,10 +7,15 @@ public class CrystalMove : CrystalPuzzle
     public Vector3[] pos;
     public Vector3[] pos2;
     public Vector3 target;
+
+    public int init = 0;//빈거로 초기화 안하려면 1번
     private void Start()
     {
         c_state = GetComponent<EmptyCrystal>();
-        c_state.state = C_STATE.EMPTY;
+        if(init == 0)
+            c_state.state = C_STATE.EMPTY;
+        
+
         pos = new Vector3[5];
         for(int i = 0; i <5; i++)
         {

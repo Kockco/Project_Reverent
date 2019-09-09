@@ -2302,11 +2302,12 @@ MonoBehaviour:
   c_state: {fileID: 0}
   pos: []
   pos2:
-  - {x: 0, y: 0, z: -1}
-  - {x: 0, y: 0, z: 1}
-  - {x: -1, y: 0, z: 0}
-  - {x: 1, y: 0, z: 0}
+  - {x: 0, y: 0, z: 3.8}
+  - {x: 0, y: 0, z: -3.8}
+  - {x: 3.8, y: 0, z: 0}
+  - {x: -3.8, y: 0, z: 0}
   target: {x: 0, y: 0, z: 0}
+  init: 0
 --- !u!1 &57446622
 GameObject:
   m_ObjectHideFlags: 0
@@ -24941,7 +24942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ecd788e6b263944ba5fb84412fe22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myNum: 1
+  myNum: 3
   state: 2
   mat: []
   colorCrystal: []
@@ -38995,6 +38996,23 @@ CapsuleCollider:
   m_Height: 2.477487
   m_Direction: 1
   m_Center: {x: 0, y: 0.5252057, z: 0}
+--- !u!114 &696038755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696038753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecd788e6b263944ba5fb84412fe22f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myNum: 1
+  state: 1
+  mat: []
+  colorCrystal: []
+  emptyCrystal: []
 --- !u!1 &699029044 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: a2d369e7d825b1f4cb4c02f4857502ca,
@@ -59093,8 +59111,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902842638}
   m_LocalRotation: {x: -0, y: 0.7166774, z: -0, w: 0.6974048}
-  m_LocalPosition: {x: 12.779999, y: 2.53, z: -59.28}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 11.24, y: 2.42, z: -59.091}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 903337258}
   - {fileID: 903337256}
@@ -65196,7 +65214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 29f9a7d6760440b409af95b8d261dd32, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.38
+      value: 1.471
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 29f9a7d6760440b409af95b8d261dd32, type: 3}
       propertyPath: m_LocalPosition.z
@@ -65776,8 +65794,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023221383}
-  m_LocalRotation: {x: -0, y: 0.9999674, z: -0, w: -0.008073294}
-  m_LocalPosition: {x: 24.47, y: -0.898, z: -73.074}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 24.39, y: -0.898, z: -75.05}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1023050403}
@@ -65785,7 +65803,7 @@ Transform:
   - {fileID: 1023050405}
   m_Father: {fileID: 2067084896}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 180.92499, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1023221377
 GameObject:
   m_ObjectHideFlags: 0
@@ -83842,8 +83860,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1339993418}
   m_LocalRotation: {x: -0.70710677, y: -0, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: 12.63, y: -5.87, z: 33.03}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.6}
+  m_LocalPosition: {x: 12.63, y: -5.588, z: 33.03}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.358662}
   m_Children: []
   m_Father: {fileID: 3477559}
   m_RootOrder: 33
@@ -87824,9 +87842,9 @@ MonoBehaviour:
   staff: {fileID: 0}
   aim: {fileID: 0}
   cc: {fileID: 0}
-  myY: 0
   jumpKey: 0
   jumpDelay: 0
+  nowSpeed: 0
 --- !u!114 &1503507118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105952,8 +105970,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468f086e36ff6264d9299df78c283abb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myNum: 88
-  state: 4
+  myNum: 3
+  state: 2
   mat: []
   colorCrystal: []
   emptyCrystal: []
@@ -105992,6 +106010,7 @@ MonoBehaviour:
   - {x: -1, y: 0, z: 0}
   - {x: 1, y: 0, z: 0}
   target: {x: 0, y: 0, z: 0}
+  init: 1
 --- !u!1 &1862651387
 GameObject:
   m_ObjectHideFlags: 0
@@ -108534,7 +108553,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973580258}
   m_LocalRotation: {x: -0, y: 0.067819804, z: -0, w: 0.9976976}
-  m_LocalPosition: {x: -5.85, y: 5.9, z: -71.43}
+  m_LocalPosition: {x: -5.7, y: 5.9, z: -71.39}
   m_LocalScale: {x: 1.9356, y: 1.9356, z: 1.9356}
   m_Children:
   - {fileID: 1973808584}
@@ -108970,6 +108989,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 29f9a7d6760440b409af95b8d261dd32, type: 3}
       propertyPath: m_Name
       value: SM_CCrystal
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 29f9a7d6760440b409af95b8d261dd32, type: 3}
+      propertyPath: m_TagString
+      value: Crystal
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 29f9a7d6760440b409af95b8d261dd32, type: 3}
       propertyPath: m_LocalPosition.x
@@ -109529,11 +109552,12 @@ MonoBehaviour:
   c_state: {fileID: 0}
   pos: []
   pos2:
-  - {x: 0, y: 0, z: -1}
-  - {x: 0, y: 0, z: 1}
-  - {x: -1, y: 0, z: 0}
-  - {x: 1, y: 0, z: 0}
+  - {x: 0, y: 0, z: 2.2}
+  - {x: 0, y: 0, z: -2.2}
+  - {x: 2.2, y: 0, z: 0}
+  - {x: -2.2, y: 0, z: 0}
   target: {x: 0, y: 0, z: 0}
+  init: 0
 --- !u!1 &1995825245
 GameObject:
   m_ObjectHideFlags: 0
