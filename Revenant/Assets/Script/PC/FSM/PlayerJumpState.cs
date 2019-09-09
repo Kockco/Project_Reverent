@@ -27,7 +27,7 @@ public class PlayerJumpState : PlayerState
         else
         {
             RaycastHit hit;
-            if (Physics.Raycast(player.transform.position, Vector3.down, out hit) && hit.distance < 1.2f)
+            if (Physics.Raycast(player.transform.position, Vector3.down, out hit) && hit.distance < 0.3f)
             {
                 player.transform.GetChild(0).GetComponent<Animator>().SetTrigger("JumpEnd");
                 player.SetState(new PlayerIdleState());

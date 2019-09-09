@@ -51,10 +51,23 @@ public class CrystalRotation : CrystalPuzzle
             for (int i = 0; i < stopPointCount; i++)
             {
                 stopPoint[i] = (section * i) + minLimit;
-                if (stopPoint[i] == 0)
+                if (parent.rotation.eulerAngles.y > 180)
                 {
-                    myPoint = i;
-                    zeroPoint = i;
+                    if (stopPoint[i] == (int)transform.parent.rotation.eulerAngles.y -360)
+                    {
+                        myPoint = i;
+                        zeroPoint = i;
+                        Debug.Log(gameObject.name + (int)transform.parent.rotation.eulerAngles.y);
+                    }
+                }
+                else
+                {
+                    if (stopPoint[i] == (int)transform.parent.rotation.eulerAngles.y)
+                    {
+                        myPoint = i;
+                        zeroPoint = i;
+                        Debug.Log(gameObject.name + (int)transform.parent.rotation.eulerAngles.y);
+                    }
                 }
             }
         }
@@ -89,18 +102,18 @@ public class CrystalRotation : CrystalPuzzle
         switch (state)
         {
             case STATE.RESET:
-                if (RotY < -1)
+                if (RotY < stopPoint[zeroPoint] - 1)
                 {
                     parent.transform.Rotate(Vector3.up * Time.deltaTime * 20);
                 }
-                else if (RotY > 1)
+                else if (RotY > stopPoint[zeroPoint] + 1)
                 {
                     parent.transform.Rotate(Vector3.down * Time.deltaTime * 20);
                 }
                 else
                 {
                     myPoint = zeroPoint;
-                    parent.transform.rotation = Quaternion.identity;
+                    parent.transform.rotation = Quaternion.Euler(new Vector3(0,stopPoint[zeroPoint],0));
                     state = STATE.NORMAL;
                 }
                 break;

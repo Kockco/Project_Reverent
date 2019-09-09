@@ -9,6 +9,8 @@ public class CrystalState : MonoBehaviour
     public int myNum;
     public C_STATE state;
     public Material[] mat;
+    public GameObject[] colorCrystal;
+    public GameObject[] emptyCrystal;
 
     public void LoadMaterial()
     {
