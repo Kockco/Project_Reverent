@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetMouseButtonDown(1))//범위 크리스탈 색 Empty로 바꾸기
         {
             player.GetComponent<Player>().PlayerAnimation("UseStaff");
+            player.GetComponent<Player>().ChangeStaffNum(88);
             player.GetComponent<Player>().ChangeStaffMaterial();
             player.GetComponent<Player>().ChangeStaffState(C_STATE.EMPTY);
         }
@@ -74,7 +75,7 @@ public class GameManager : MonoBehaviour
                     goto Jump2;
                 //완전체 크리스탈의 정보를 스태프로 가져옴
                 player.GetComponent<Player>().ChangeStaffNum(aim.GetComponent<PlayerAimState>().col.GetComponent<ColorCrystal>().myNum);
-                player.GetComponent<Player>().ChangeStaffMaterial(aim.GetComponent<PlayerAimState>().col.GetComponent<MeshRenderer>().material);
+                player.GetComponent<Player>().ChangeStaffMaterial(aim.GetComponent<PlayerAimState>().col.transform.GetChild(0).GetComponent<MeshRenderer>().materials[2]);
                 player.GetComponent<Player>().ChangeStaffState(aim.GetComponent<PlayerAimState>().col.GetComponent<ColorCrystal>().state);
             Jump2: return;
             }

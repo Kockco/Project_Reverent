@@ -30,9 +30,12 @@ public class CameraPlayer : MonoBehaviour
     [SerializeField]
     float nowDistance;
 
+    public bool otherCamera;
+
     // Use this for initialization
     void Awake()
     {
+        otherCamera = false;
         topView = false;
         myTransform = transform;
         model = transform.GetChild(0);
@@ -45,29 +48,34 @@ public class CameraPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Balance();
-        CameraDistanceCtrl();
-
-        if (Input.GetKeyDown(KeyCode.T)) // 탑뷰로 바꾸기
+        if (!otherCamera)
         {
-            if (!topView)
-                topView = true;
-            else
-                topView = false;
-        }
-        //test 용
-        nowDistance = Camera.main.transform.localPosition.z;
-        transform.localScale = new Vector3(charSize, charSize, charSize);
+            Balance();
+            CameraDistanceCtrl();
 
-       
+            if (Input.GetKeyDown(KeyCode.T)) // 탑뷰로 바꾸기
+            {
+                if (!topView)
+                    topView = true;
+                else
+                    topView = false;
+            }
+            //test 용
+            nowDistance = Camera.main.transform.localPosition.z;
+            transform.localScale = new Vector3(charSize, charSize, charSize);
+
+        }
       
     }
     void LateUpdate()
     {
-        if(!topView)
-            MouseSense();
-        else
-            TopView();
+        if (!otherCamera)
+        {
+            if (!topView)
+                MouseSense();
+            else
+                TopView();
+        }
         //MouseSense();
        // MyView();
     }
