@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3417,7 +3417,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25466
+  m_Name: pb_Mesh726536
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -38307,9 +38307,10 @@ MonoBehaviour:
   cameraTransform: {fileID: 0}
   staff: {fileID: 0}
   aim: {fileID: 0}
-  myY: 0
+  cc: {fileID: 0}
   jumpKey: 0
   jumpDelay: 0
+  nowSpeed: 0
 --- !u!65 &1017895195
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44292,7 +44293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ecd788e6b263944ba5fb84412fe22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myNum: 401
+  myNum: 404
   state: 1
   mat: []
   colorCrystal: []
@@ -48188,7 +48189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ecd788e6b263944ba5fb84412fe22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myNum: 402
+  myNum: 401
   state: 0
   mat: []
   colorCrystal: []
@@ -49864,9 +49865,10 @@ MonoBehaviour:
   cameraTransform: {fileID: 0}
   staff: {fileID: 0}
   aim: {fileID: 0}
-  myY: 0
+  cc: {fileID: 0}
   jumpKey: 0
   jumpDelay: 0
+  nowSpeed: 0
 --- !u!114 &1429991193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50020,7 +50022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ecd788e6b263944ba5fb84412fe22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myNum: 403
+  myNum: 402
   state: 0
   mat: []
   colorCrystal: []
@@ -73332,7 +73334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ecd788e6b263944ba5fb84412fe22f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myNum: 404
+  myNum: 403
   state: 0
   mat: []
   colorCrystal: []
