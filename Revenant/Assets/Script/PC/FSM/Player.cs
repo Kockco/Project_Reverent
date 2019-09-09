@@ -24,9 +24,10 @@ public class Player : MonoBehaviour
 
     public CharacterController cc;
 
-    public float myY;
     public bool jumpKey;
     public float jumpDelay;
+
+    public float nowSpeed;
     private void Awake()
     {
         
@@ -48,10 +49,9 @@ public class Player : MonoBehaviour
     {
         //state Update
         currentState.Update();
-
+        nowSpeed = new Vector3(cc.velocity.x, 0, cc.velocity.z).magnitude;
         cc.Move(move * Time.deltaTime);
-
-        //Debug.Log("점프높이" + (transform.position.y - myY));
+        
     }
 
     public void SetState(PlayerState nextState)

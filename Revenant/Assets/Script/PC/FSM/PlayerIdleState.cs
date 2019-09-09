@@ -17,6 +17,8 @@ public class PlayerIdleState : PlayerState
     void PlayerState.Update()
     {
         Debug.Log((float)jumpDelay);
+        
+
         // 실행할것 구현
         player.MoveCalc(1.0f);
         
@@ -25,6 +27,16 @@ public class PlayerIdleState : PlayerState
             player.yVelocity = 0;
         }
 
+        if(player.nowSpeed == 0)
+        {
+            player.transform.GetChild(0).GetComponent<Animator>().SetBool("idle", true);
+            player.transform.GetChild(0).GetComponent<Animator>().SetBool("move", false);
+        }
+        else
+        {
+            player.transform.GetChild(0).GetComponent<Animator>().SetBool("idle", false);
+            player.transform.GetChild(0).GetComponent<Animator>().SetBool("move", true);
+        }
         //player.move.y -= player.gravity * Time.deltaTime;
         if (jumpDelay < 0.2f)
             jumpDelay += Time.deltaTime;

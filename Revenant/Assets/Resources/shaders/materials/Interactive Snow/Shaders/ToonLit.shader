@@ -1,4 +1,4 @@
-Shader "Toon/Lit" {
+Shader "Toon/Lit Bright" {
 	Properties {
 		_Color ("Main Color", Color) = (0.5,0.5,0.5,1)
 		_MainTex ("Base (RGB)", 2D) = "white" {}
@@ -22,12 +22,12 @@ inline half4 LightingToonRamp (SurfaceOutput s, half3 lightDir, half atten)
 	#ifndef USING_DIRECTIONAL_LIGHT
 	lightDir = normalize(lightDir);
 	#endif
-	
-	half d = dot (s.Normal, lightDir)*0.5 + 0.5;
-	half3 ramp = tex2D (_Ramp, float2(d,d)).rgb;
-	
-	half4 c;
-	c.rgb = s.Albedo * _LightColor0.rgb * ramp * (atten * 2);
+		
+			float d = dot(s.Normal, lightDir);
+			float dChange = fwidth(d);
+			float3 lightIntensity = smoothstep(0, dChange + 0.06, d) + 0.8f;
+            half4 c;
+	c.rgb = s.Albedo * _LightColor0.rgb * lightIntensity * (atten * 2);
 	c.a = 0;
 	return c;
 }
