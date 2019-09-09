@@ -51,10 +51,23 @@ public class CrystalRotation : CrystalPuzzle
             for (int i = 0; i < stopPointCount; i++)
             {
                 stopPoint[i] = (section * i) + minLimit;
-                if (stopPoint[i] == (int)transform.parent.rotation.eulerAngles.y)
+                if (parent.rotation.eulerAngles.y > 180)
                 {
-                    myPoint = i;
-                    zeroPoint = i;
+                    if (stopPoint[i] == (int)transform.parent.rotation.eulerAngles.y -360)
+                    {
+                        myPoint = i;
+                        zeroPoint = i;
+                        Debug.Log(gameObject.name + (int)transform.parent.rotation.eulerAngles.y);
+                    }
+                }
+                else
+                {
+                    if (stopPoint[i] == (int)transform.parent.rotation.eulerAngles.y)
+                    {
+                        myPoint = i;
+                        zeroPoint = i;
+                        Debug.Log(gameObject.name + (int)transform.parent.rotation.eulerAngles.y);
+                    }
                 }
             }
         }
