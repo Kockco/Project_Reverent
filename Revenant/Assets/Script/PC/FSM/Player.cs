@@ -149,10 +149,11 @@ public class Player : MonoBehaviour
     public void PlayerAnimation(string aniName) { model.GetComponent<Animator>().SetTrigger(aniName); }
 
     //스태프의 getset
-    public C_STATE GetStaffState() { return staff.GetComponent<PlayerStaff>().GetState();}
+    public C_STATE GetStaffState() { return staff.GetComponent<PlayerStaff>().GetState(); }
     public int GetStaffCryNumber() { return staff.GetComponent<PlayerStaff>().GetCrystalNum(); }
     public void ChangeStaffNum(int num) { staff.GetComponent<PlayerStaff>().ChangeNum(num); }
     public void ChangeStaffMaterial() { staff.GetComponent<PlayerStaff>().ChangeMaterial(); }
+    public void ChangeStaffMaterial(Material mat) { staff.GetComponent<PlayerStaff>().ChangeMaterial(mat); }
     public void ChangeStaffState(C_STATE state) { staff.GetComponent<PlayerStaff>().ChangeState(state); }
-    
+
 }
