@@ -15,22 +15,30 @@ public class ChangeCam : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        player.otherCamera = true;
-        cam[0].enabled = false;
-        if (situation == 0)
-            cam[1].enabled = true;
-        if (situation == 1)
-            cam[2].enabled = true;
+        if (other.tag == "Player")
+        {
+            player.otherCamera = true;
+            player.transform.GetChild(0).gameObject.SetActive(false);
+            cam[0].enabled = false;
+            if (situation == 0)
+                cam[1].enabled = true;
+            if (situation == 1)
+                cam[2].enabled = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        player.otherCamera = false;
-        cam[0].enabled = true;
-        if (situation == 0)
-            cam[1].enabled = false;
-        if (situation == 1)
-            cam[2].enabled = false;
+        if (other.tag == "Player")
+        {
+            player.otherCamera = false;
 
+            player.transform.GetChild(0).gameObject.SetActive(true);
+            cam[0].enabled = true;
+            if (situation == 0)
+                cam[1].enabled = false;
+            if (situation == 1)
+                cam[2].enabled = false;
+        }
     }
 }
