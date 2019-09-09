@@ -19,8 +19,14 @@ public class PlayerIdleState : PlayerState
         Debug.Log((float)jumpDelay);
         // 실행할것 구현
         player.MoveCalc(1.0f);
+        
+        if (player.cc.isGrounded)
+        {
+            player.yVelocity = 0;
+        }
+
         //player.move.y -= player.gravity * Time.deltaTime;
-        if (jumpDelay < 0.5f)
+        if (jumpDelay < 0.2f)
             jumpDelay += Time.deltaTime;
         else
         {

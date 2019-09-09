@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     public GameObject staff;
     public Transform aim;
 
-    CharacterController cc;
+    public CharacterController cc;
 
     public float myY;
     public bool jumpKey;
@@ -73,7 +73,7 @@ public class Player : MonoBehaviour
         if (hit.transform.position.y < transform.position.y)
         {
             //Debug.Log("충돌됨");
-            yVelocity = 0;
+            //yVelocity = 0;
         }
     }
     public void MoveCalc(float ratio)
@@ -133,7 +133,6 @@ public class Player : MonoBehaviour
         if(jumpDelay > 0.3f)
         {
             yVelocity = jumpPower;
-            myY = transform.position.y;
             jumpKey = false;
             jumpDelay = 0;
             SetState(new PlayerJumpState());
