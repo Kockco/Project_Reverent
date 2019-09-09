@@ -32,17 +32,17 @@ public class PlayerIdleState : PlayerState
             player.transform.GetChild(0).GetComponent<Animator>().SetBool("move", true);
         }
 
+        player.MoveCalc(1.0f);
+
         //player.move.y -= player.gravity * Time.deltaTime;
         if (jumpDelay < 0.6f)
         {
             jumpDelay += Time.deltaTime;
-            player.move = Vector3.zero;
+            //player.move = Vector3.zero;
         }
         else
         {
             player.Jump();
-            // 실행할것 구현
-            player.MoveCalc(1.0f);
         }
         player.Gravity();
         //GradientCheck();
