@@ -118,7 +118,7 @@ public class Player : MonoBehaviour
 
     public void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && jumpKey == false)
         {
             transform.GetChild(0).GetComponent<Animator>().SetBool("Jump",true);
             jumpKey = true;

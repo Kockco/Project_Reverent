@@ -5,13 +5,18 @@ using UnityEngine;
 public class CrystalStairs : CrystalPuzzle
 {
     public GameObject[] stairs;
+    public float[] height;
+
     private void Start()
     {
         c_state = GetComponent<EmptyCrystal>();
         c_state.state = C_STATE.EMPTY;
-        stairs = new GameObject[4]; 
-        for (int i = 0; i < 4 /*stairs.length*/; i++)
-            stairs[i] = transform.GetChild(i).gameObject;
+        stairs = new GameObject[4];
+        height = new float[2];
+        height[0] = transform.position.y - 2.3f;
+        height[1] = height[0] + 1.54f;
+        for (int i = 1; i < 5 /*stairs.length*/; i++)
+            stairs[i-1] = transform.GetChild(i).gameObject;
     }
     private void Update()
     {
@@ -24,7 +29,7 @@ public class CrystalStairs : CrystalPuzzle
         for (int i = 0; i < 4; i++)
         {
             if (i != (int)c_state.state)
-                stairs[i].transform.position = new Vector3(stairs[i].transform.position.x, -2.64f, stairs[i].transform.position.z);
+                stairs[i].transform.position = new Vector3(stairs[i].transform.position.x, height[0], stairs[i].transform.position.z);
         }
         switch (c_state.state)
         {
@@ -34,25 +39,25 @@ public class CrystalStairs : CrystalPuzzle
             case C_STATE.BLUE:
                 StairsArrive(stairs[0]);
                 stairs[0].SetActive(true);
-                if (stairs[0].transform.position.y <= 0) // (이부분 수정함 땃쥐야)
-                stairs[0].transform.Translate(0, 10 * Time.deltaTime, 0);
+                if (stairs[0].transform.position.y <= height[1]) // (이부분 수정함 땃쥐야)
+                    stairs[0].transform.Translate(0, 10 * Time.deltaTime, 0);
                 break;
             case C_STATE.WHITE:
                 StairsArrive(stairs[1]);
                 stairs[1].SetActive(true);
-                if (stairs[1].transform.position.y <= 0)// (이부분 수정함 땃쥐야)
+                if (stairs[1].transform.position.y <= height[1])// (이부분 수정함 땃쥐야)
                     stairs[1].transform.Translate(0, 2 * Time.deltaTime, 0);
                 break;
             case C_STATE.RED:
                 StairsArrive(stairs[2]);
                 stairs[2].SetActive(true);
-                if (stairs[2].transform.position.y <= 0)// (이부분 수정함 땃쥐야)
+                if (stairs[2].transform.position.y <= height[1])// (이부분 수정함 땃쥐야)
                     stairs[2].transform.Translate(0, 2 * Time.deltaTime, 0);
                 break;
             case C_STATE.BLACK:
                 StairsArrive(stairs[3]);
                 stairs[3].SetActive(true);
-                if (stairs[3].transform.position.y <= 0)// (이부분 수정함 땃쥐야)
+                if (stairs[3].transform.position.y <= height[1])// (이부분 수정함 땃쥐야)
                     stairs[3].transform.Translate(0, 2 * Time.deltaTime, 0);
                 break;
         }
@@ -60,7 +65,7 @@ public class CrystalStairs : CrystalPuzzle
 
     void StairsArrive(GameObject stair)
     {
-        if(stair.transform.position.y >= 0f)
+        if(stair.transform.position.y >= height[1])
         {
             c_state.isActive = false;
         }
