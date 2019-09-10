@@ -205,7 +205,7 @@ MonoBehaviour:
     value: 0
   color:
     overrideState: 1
-    value: {r: 1, g: 1, b: 1, a: 1}
+    value: {r: 1, g: 0.98371613, b: 0.8349056, a: 1}
   fastMode:
     overrideState: 0
     value: 0
@@ -323,7 +323,7 @@ MonoBehaviour:
     value: {x: 1, y: 0.96602905, z: 0.97243255, w: 0}
   gamma:
     overrideState: 1
-    value: {x: 1, y: 0.93337786, z: 0.9333778, w: 0}
+    value: {x: 1, y: 0.87212783, z: 0.8562877, w: 0}
   gain:
     overrideState: 0
     value: {x: 1, y: 0.9929343, z: 0.9717349, w: 0}
