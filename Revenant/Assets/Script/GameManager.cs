@@ -30,12 +30,12 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) // 크리스탈 색 빼기
         {
-            player.GetComponent<Player>().PlayerAnimation("UseStaff");
+            player.GetComponent<Player>().PlayerAnimation("Click");
             UseStaff();
         }
         if (Input.GetMouseButtonDown(1))//범위 크리스탈 색 Empty로 바꾸기
         {
-            player.GetComponent<Player>().PlayerAnimation("UseStaff");
+            player.GetComponent<Player>().PlayerAnimation("RClick");
             player.GetComponent<Player>().ChangeStaffNum(88);
             player.GetComponent<Player>().ChangeStaffMaterial();
             player.GetComponent<Player>().ChangeStaffState(C_STATE.EMPTY);

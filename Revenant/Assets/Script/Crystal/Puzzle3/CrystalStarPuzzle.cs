@@ -21,7 +21,7 @@ public class CrystalStarPuzzle : CrystalPuzzle
 
     LineRenderer Line;
     public GameObject[] LinkPos;
-    public GameObject nextCrystal;
+    public GameObject[] nextCrystal;
     int posLenght;
     private void Start()
     {
@@ -65,7 +65,21 @@ public class CrystalStarPuzzle : CrystalPuzzle
                 {
                     Line.SetPosition(1, transform.position);
                     Line.SetPosition(0, LinkPos[i].transform.position);
-                    Line.SetPosition(2, nextCrystal.transform.position);
+                }
+                switch (transform.GetComponent<CrystalState>().myNum)
+                {
+                    case 401:
+                        Line.SetPosition(2, nextCrystal[1].transform.position);
+                        break;
+                    case 402:
+                        Line.SetPosition(2, nextCrystal[2].transform.position);
+                        break;
+                    case 403:
+                        Line.SetPosition(2, nextCrystal[3].transform.position);
+                        break;
+                    case 404:
+                        Line.SetPosition(2, transform.position);
+                        break;
                 }
             }
         }

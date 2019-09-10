@@ -18,10 +18,12 @@ public class ChangeCam : MonoBehaviour
         if (other.tag == "Player")
         {
             player.otherCamera = true;
-            player.transform.GetChild(0).gameObject.SetActive(false);
             cam[0].enabled = false;
             if (situation == 0)
+            {
+                player.transform.GetChild(0).gameObject.SetActive(false);
                 cam[1].enabled = true;
+            }
             if (situation == 1)
                 cam[2].enabled = true;
         }
@@ -32,11 +34,13 @@ public class ChangeCam : MonoBehaviour
         if (other.tag == "Player")
         {
             player.otherCamera = false;
-
-            player.transform.GetChild(0).gameObject.SetActive(true);
+            
             cam[0].enabled = true;
             if (situation == 0)
+            {
+                player.transform.GetChild(0).gameObject.SetActive(true);
                 cam[1].enabled = false;
+            }
             if (situation == 1)
                 cam[2].enabled = false;
         }
