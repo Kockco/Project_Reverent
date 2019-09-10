@@ -72,7 +72,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Ramp:
+<<<<<<< HEAD
         m_Texture: {fileID: 2800000, guid: e9a9781cad112c75d0008dfa8d76c639, type: 3}
+=======
+        m_Texture: {fileID: 2800000, guid: 23740055e2b119e40a939138ab8070f8, type: 3}
+>>>>>>> 202cc2547a51403383e17cf958aa406fdd965eb5
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -134,7 +138,11 @@ Material:
     - _BackBottomColor: {r: 1, g: 1, b: 1, a: 0}
     - _BackTopColor: {r: 1, g: 1, b: 1, a: 0}
     - _BottomColor: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 0}
+<<<<<<< HEAD
     - _Color: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
+=======
+    - _Color: {r: 1.2183251, g: 1.2183251, b: 1.2183251, a: 1}
+>>>>>>> 202cc2547a51403383e17cf958aa406fdd965eb5
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FrontBottomColor: {r: 1, g: 1, b: 1, a: 0}
     - _FrontTopColor: {r: 1, g: 1, b: 1, a: 0}
