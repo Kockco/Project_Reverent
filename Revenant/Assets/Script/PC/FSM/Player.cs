@@ -4,40 +4,41 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    //캐릭터 상태
     public PlayerState currentState;
 
+    //이동관련
     public Vector3 move;
     public Transform myTransform;
-    
-    public float gravity = 9.81f;
-    public float yVelocity = 0;
-
     [Range(0.1f, 30.0f)]
     public float runSpeed = 5;
     [Range(0.1f, 30.0f)]
     public float jumpPower = 10f;
 
+    //중력
+    public float gravity = 9.81f;
+    public float yVelocity = 0;
+    
+    //카메라 관련
     public Transform model;
     public Transform cameraTransform;
     public GameObject staff;
     public Transform aim;
 
     public CharacterController cc;
-
+    
+    //점프키 와 딜레이
     public bool jumpKey;
     public float jumpDelay;
 
     public float nowSpeed;
     private void Awake()
     {
-        
-        //Start idleState
+        //상태변경, 스태프 찾아오기
         SetState(new PlayerIdleState());
-        
         staff = GameObject.Find("Staff");
         if (staff == null)
             Debug.Log("PlayerScript Error : staff not find");
-
         cc = GetComponent<CharacterController>();
         model = transform.GetChild(0);
         cameraTransform = Camera.main.transform.parent;
@@ -76,6 +77,7 @@ public class Player : MonoBehaviour
             //yVelocity = 0;
         }
     }
+
     public void MoveCalc(float ratio)
     {
         float tempMoveY = move.y;
