@@ -14,7 +14,6 @@ public class PlayerJumpState : PlayerState
         // 초기화 구현
         delay = 0;
         groundCheck = false;
-        player.transform.GetChild(0).GetComponent<Animator>().SetBool("Jump", false);
     }
     void PlayerState.Update()
     {
@@ -30,6 +29,7 @@ public class PlayerJumpState : PlayerState
             if (Physics.Raycast(player.transform.position, Vector3.down, out hit) && hit.distance < 0.15f)
             {
                 player.transform.GetChild(0).GetComponent<Animator>().SetTrigger("JumpEnd");
+                player.transform.GetChild(0).GetComponent<Animator>().SetBool("Jump", false);
                 player.SetState(new PlayerIdleState());
             }
         }

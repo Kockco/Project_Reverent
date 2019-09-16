@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     [Range(0.1f, 30.0f)]
     public float runSpeed = 5;
     [Range(0.1f, 30.0f)]
-    public float jumpPower = 10f;
+    public float jumpPower = 6f;
 
     //중력
     public float gravity = 9.81f;
@@ -51,8 +51,9 @@ public class Player : MonoBehaviour
         //state Update
         currentState.Update();
         nowSpeed = new Vector3(cc.velocity.x, 0, cc.velocity.z).magnitude;
-        cc.Move(move * Time.deltaTime);
-        
+
+        if (!jumpKey || move.y < -0.5f)
+            cc.Move(move * Time.deltaTime);
     }
 
     public void SetState(PlayerState nextState)
@@ -62,13 +63,11 @@ public class Player : MonoBehaviour
         {
             currentState.OnExit();
         }
-
         // next state start
         currentState = nextState;
         currentState.OnEnter(this);
     }
     
-
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if (hit.transform.position.y < transform.position.y)
@@ -132,7 +131,7 @@ public class Player : MonoBehaviour
     public void JumpDelay()
     {
         jumpDelay += Time.deltaTime;
-        if(jumpDelay > 0.3f)
+        if (jumpDelay > 0.2f)
         {
             yVelocity = jumpPower;
             jumpKey = false;
@@ -143,7 +142,10 @@ public class Player : MonoBehaviour
     public void Gravity()
     {
         move.y = yVelocity;
-        if (yVelocity > -19)
+
+        if (yVelocity >= 0)
+            yVelocity -= gravity * Time.deltaTime;
+        else if (yVelocity > -19 && yVelocity < 0)
             yVelocity -= gravity *3* Time.deltaTime;
     }
     

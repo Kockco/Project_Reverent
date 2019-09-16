@@ -8,8 +8,7 @@ public class GameManager : MonoBehaviour
     GameObject aim;
     public GameObject[] emptyCrystal;
     public int emptyCrystalLenght;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         if (emptyCrystal != null)
@@ -25,7 +24,6 @@ public class GameManager : MonoBehaviour
             Debug.Log("GameManager Error : aim not find");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) // 크리스탈 색 빼기
@@ -60,8 +58,8 @@ public class GameManager : MonoBehaviour
                     int saveNum = player.GetComponent<Player>().GetStaffCryNumber();
                     C_STATE saveState = player.GetComponent<Player>().GetStaffState(); //스태프 상태 저장
                     player.GetComponent<Player>().ChangeStaffNum(aim.GetComponent<PlayerAimState>().col.GetComponent<EmptyCrystal>().myNum); //빈크리스탈과 Link되잇는 넘버정보넘김
-                    player.GetComponent<Player>().ChangeStaffMaterial(aim.GetComponent<PlayerAimState>().col.GetComponent<EmptyCrystal>().myMat.material); //크리스탈 메테리얼 넘김(스태프색바뀜)
                     player.GetComponent<Player>().ChangeStaffState(aim.GetComponent<PlayerAimState>().col.GetComponent<EmptyCrystal>().state); //빈크리스탈의 상태를 스태프에게 전달
+                    player.GetComponent<Player>().ChangeStaffMaterial(aim.GetComponent<PlayerAimState>().col.GetComponent<EmptyCrystal>().myMat.material); //크리스탈 메테리얼 넘김(스태프색바뀜)
                     aim.GetComponent<PlayerAimState>().col.GetComponent<EmptyCrystal>().myNum = saveNum; //저장되있던 스태프와 Link되있는 넘버정보를 넘김
                     aim.GetComponent<PlayerAimState>().col.GetComponent<EmptyCrystal>().state = saveState; // 저장되있던 스태프 상태를 넘김(크리스탈색바뀜)
                 }
