@@ -14,7 +14,7 @@ public class CrystalStairs : CrystalPuzzle
         stairs = new GameObject[4];
         height = new float[2];
         height[0] = transform.position.y - 2.3f;
-        height[1] = height[0] + 1.54f;
+        height[1] = height[0] + 2.45f;
         for (int i = 1; i < 5 /*stairs.length*/; i++)
             stairs[i-1] = transform.GetChild(i).gameObject;
     }
