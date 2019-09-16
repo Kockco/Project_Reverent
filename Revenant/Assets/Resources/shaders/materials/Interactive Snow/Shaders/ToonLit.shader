@@ -16,8 +16,9 @@ sampler2D _Ramp;
 
 // custom lighting function that uses a texture ramp based
 // on angle between light direction and normal
-#pragma lighting ToonRamp exclude_path:prepass
-inline half4 LightingToonRamp (SurfaceOutput s, half3 lightDir, half atten)
+//#pragma lighting ToonRamp exclude_path:prepass
+
+	inline half4 LightingToonRamp (SurfaceOutput s, half3 lightDir, float3 viewDir, half atten)
 {
 	#ifndef USING_DIRECTIONAL_LIGHT
 	lightDir = normalize(lightDir);
