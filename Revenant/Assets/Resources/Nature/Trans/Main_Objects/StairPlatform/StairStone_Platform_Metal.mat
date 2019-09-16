@@ -102,7 +102,7 @@ Material:
     - _WorldScale: 1
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 0.64091504, b: 0.08962262, a: 1}
+    - _Color: {r: 1.4522365, g: 1.2259068, b: 1.0480764, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HiColor: {r: 1, g: 1, b: 1, a: 1}
     - _IrColor: {r: 1.8301886, g: 1.0233749, b: 0.3884835, a: 1}
