@@ -31,8 +31,7 @@ public class PlayerIdleState : PlayerState
             player.transform.GetChild(0).GetComponent<Animator>().SetBool("idle", false);
             player.transform.GetChild(0).GetComponent<Animator>().SetBool("move", true);
         }
-
-        player.MoveCalc(1.0f);
+            player.MoveCalc(1.0f);
 
         //player.move.y -= player.gravity * Time.deltaTime;
         if (jumpDelay < 0.6f)

@@ -15,11 +15,11 @@ public class CrystalState : MonoBehaviour
     public void LoadMaterial()
     {
         mat = new Material[5];
-        mat[0] = Resources.Load("Nature/Trans/Main_Objects/CCrystal/Crystal_Blue", typeof(Material)) as Material;
-        mat[1] = Resources.Load("Nature/Trans/Main_Objects/CCrystal/Crystal_White", typeof(Material)) as Material;
-        mat[2] = Resources.Load("Nature/Trans/Main_Objects/CCrystal/Crystal_Red", typeof(Material)) as Material;
-        mat[3] = Resources.Load("Nature/Trans/Main_Objects/CCrystal/Crystal_Black", typeof(Material)) as Material;
-        mat[4] = Resources.Load("Nature/Trans/Main_Objects/CCrystal/Crystal_Empty", typeof(Material)) as Material;
+        mat[0] = Resources.Load("Nature/Trans/Main_Objects/COMMON/CCrystal/Crystal_Blue", typeof(Material)) as Material;
+        mat[1] = Resources.Load("Nature/Trans/Main_Objects/COMMON/CCrystal/Crystal_White", typeof(Material)) as Material;
+        mat[2] = Resources.Load("Nature/Trans/Main_Objects/COMMON/CCrystal/Crystal_Red", typeof(Material)) as Material;
+        mat[3] = Resources.Load("Nature/Trans/Main_Objects/COMMON/CCrystal/Crystal_Black", typeof(Material)) as Material;
+        mat[4] = Resources.Load("Nature/Trans/Main_Objects/COMMON/CCrystal/Crystal_Empty", typeof(Material)) as Material;
     }
 
     public void LoadMaterial(GameObject obj,int matNum,C_STATE stat)
@@ -28,23 +28,23 @@ public class CrystalState : MonoBehaviour
         switch (stat)
         {
             case C_STATE.BLUE:
-                mts[matNum] = Resources.Load("Nature/Trans/Main_Objects/CCrystal/Crystal_Blue", typeof(Material)) as Material;
+                mts[matNum] = Resources.Load("Nature/Trans/Main_Objects/COMMON/CCrystal/Crystal_Blue", typeof(Material)) as Material;
                 obj.GetComponent<MeshRenderer>().materials = mts;
                 break;
             case C_STATE.WHITE:
-                mts[matNum] = Resources.Load("Nature/Trans/Main_Objects/CCrystal/Crystal_White", typeof(Material)) as Material;
+                mts[matNum] = Resources.Load("Nature/Trans/Main_Objects/COMMON/CCrystal/Crystal_White", typeof(Material)) as Material;
                 obj.GetComponent<MeshRenderer>().materials = mts;
                 break;
             case C_STATE.RED:
-                mts[matNum] = Resources.Load("Nature/Trans/Main_Objects/CCrystal/Crystal_Red", typeof(Material)) as Material;
+                mts[matNum] = Resources.Load("Nature/Trans/Main_Objects/COMMON/CCrystal/Crystal_Red", typeof(Material)) as Material;
                 obj.GetComponent<MeshRenderer>().materials = mts;
                 break;
             case C_STATE.BLACK:
-                mts[matNum] = Resources.Load("Nature/Trans/Main_Objects/CCrystal/Crystal_Black", typeof(Material)) as Material;
+                mts[matNum] = Resources.Load("Nature/Trans/Main_Objects/COMMON/CCrystal/Crystal_Black", typeof(Material)) as Material;
                 obj.GetComponent<MeshRenderer>().materials = mts;
                 break;
             case C_STATE.EMPTY:
-                mts[matNum] = Resources.Load("Nature/Trans/Main_Objects/CCrystal/Crystal_Empty", typeof(Material)) as Material;
+                mts[matNum] = Resources.Load("Nature/Trans/Main_Objects/COMMON/CCrystal/Crystal_Empty", typeof(Material)) as Material;
                 obj.GetComponent<MeshRenderer>().materials = mts;
                 break;
         }

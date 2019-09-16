@@ -91,6 +91,6 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 3.4767985, g: 3.4767985, b: 3.4767985, a: 1}
+    - _EmissionColor: {r: 3.4767988, g: 3.4767988, b: 3.4767988, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _Specular: {r: 1, g: 1, b: 1, a: 1}
