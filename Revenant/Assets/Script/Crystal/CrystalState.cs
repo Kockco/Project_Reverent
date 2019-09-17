@@ -11,6 +11,7 @@ public class CrystalState : MonoBehaviour
     public Material[] mat;
     public GameObject[] colorCrystal;
     public GameObject[] emptyCrystal;
+    public float delay =0.5f;
 
     public void LoadMaterial()
     {

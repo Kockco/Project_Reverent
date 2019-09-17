@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
     //점프키 와 딜레이
     public bool jumpKey;
     public float jumpDelay;
+    public float nextDelay;
 
     public float nowSpeed;
     private void Awake()
@@ -52,7 +53,9 @@ public class Player : MonoBehaviour
         currentState.Update();
         nowSpeed = new Vector3(cc.velocity.x, 0, cc.velocity.z).magnitude;
 
-        if (!jumpKey || move.y < -0.5f)
+        //if (nextDelay <= 0.3f)
+            nextDelay += Time.deltaTime;
+        if ((!jumpKey || move.y < -0.5f) && nextDelay > 0.3f)
             cc.Move(move * Time.deltaTime);
     }
 

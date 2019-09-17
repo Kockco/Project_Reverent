@@ -30,6 +30,7 @@ public class PlayerJumpState : PlayerState
             {
                 player.transform.GetChild(0).GetComponent<Animator>().SetTrigger("JumpEnd");
                 player.transform.GetChild(0).GetComponent<Animator>().SetBool("Jump", false);
+                player.nextDelay = 0;
                 player.SetState(new PlayerIdleState());
             }
         }

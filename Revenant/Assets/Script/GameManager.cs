@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour
                     player.GetComponent<Player>().ChangeStaffMaterial(aim.GetComponent<PlayerAimState>().col.GetComponent<EmptyCrystal>().myMat.material); //크리스탈 메테리얼 넘김(스태프색바뀜)
                     aim.GetComponent<PlayerAimState>().col.GetComponent<EmptyCrystal>().myNum = saveNum; //저장되있던 스태프와 Link되있는 넘버정보를 넘김
                     aim.GetComponent<PlayerAimState>().col.GetComponent<EmptyCrystal>().state = saveState; // 저장되있던 스태프 상태를 넘김(크리스탈색바뀜)
+                    aim.GetComponent<PlayerAimState>().col.GetComponent<EmptyCrystal>().delay = 0;
                 }
 
             Jump: return;
