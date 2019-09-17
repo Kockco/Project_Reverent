@@ -20,7 +20,7 @@ public class CrystalStairs : CrystalPuzzle
     }
     private void Update()
     {
-        if(c_state.isActive == true)
+        if(c_state.isActive == true && transform.GetComponent<EmptyCrystal>().delay >0.5f)
             StairChange();
     }
 

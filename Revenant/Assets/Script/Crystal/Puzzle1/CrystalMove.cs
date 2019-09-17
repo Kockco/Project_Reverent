@@ -29,7 +29,7 @@ public class CrystalMove : CrystalPuzzle
     }
     private void Update()
     {
-        if (c_state.isActive)
+        if (c_state.isActive && transform.GetComponent<EmptyCrystal>().delay >0.8f)
         {
             if (transform.position == pos[4] && c_state.state != C_STATE.EMPTY)
             {
@@ -52,7 +52,7 @@ public class CrystalMove : CrystalPuzzle
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (c_state.isActive)
+        if (c_state.isActive && transform.GetComponent<EmptyCrystal>().delay > 0.8f)
             transform.position = Vector3.Lerp(transform.position, target, Time.fixedDeltaTime * 2f);
     }
 

@@ -24,6 +24,10 @@ public class EmptyCrystal : CrystalState
     // Update is called once per frame
     void Update()
     {
+        if (delay <= 0.8f)
+            delay += Time.deltaTime;
+
+        if(delay > 0.8f)
         ChangeMat();
     }
     public void ChangeMat()
