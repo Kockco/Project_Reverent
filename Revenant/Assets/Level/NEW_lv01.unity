@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: e0a6fd2ffb050d1489fdb8b330f5c49e, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: b880517989421ab40b02b64a506da047, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -1958,11 +1958,8 @@ Transform:
   m_LocalPosition: {x: 72.1, y: -1.99, z: -1.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2027526365}
   - {fileID: 722337454}
-  - {fileID: 1423061253}
-  - {fileID: 1470126571}
-  - {fileID: 1541163639}
+  - {fileID: 2027526365}
   - {fileID: 379993217}
   - {fileID: 1435524881}
   - {fileID: 535869711}
@@ -1974,8 +1971,11 @@ Transform:
   - {fileID: 32141165}
   - {fileID: 543670611}
   - {fileID: 1304648207}
-  - {fileID: 213383819}
   - {fileID: 1760516135}
+  - {fileID: 1423061253}
+  - {fileID: 1470126571}
+  - {fileID: 1541163639}
+  - {fileID: 213383819}
   m_Father: {fileID: 1691017960}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2002,6 +2002,7 @@ MonoBehaviour:
   mat: []
   colorCrystal: []
   emptyCrystal: []
+  delay: 0.5
 --- !u!136 &55481294
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2033,6 +2034,7 @@ MonoBehaviour:
   mat: []
   colorCrystal: []
   emptyCrystal: []
+  delay: 0.5
   myMat: {fileID: 0}
   isActive: 0
 --- !u!65 &56886398
@@ -7466,6 +7468,7 @@ MonoBehaviour:
   mat: []
   colorCrystal: []
   emptyCrystal: []
+  delay: 0.5
 --- !u!136 &490423132
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8447,7 +8450,7 @@ Transform:
   - {fileID: 1670094774}
   - {fileID: 450514650}
   m_Father: {fileID: 1691017960}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -172.34601, z: 0}
 --- !u!4 &578968163 stripped
 Transform:
@@ -9952,6 +9955,7 @@ MonoBehaviour:
   mat: []
   colorCrystal: []
   emptyCrystal: []
+  delay: 0.5
 --- !u!1 &699029044 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: a2d369e7d825b1f4cb4c02f4857502ca,
@@ -12529,6 +12533,7 @@ MonoBehaviour:
   mat: []
   colorCrystal: []
   emptyCrystal: []
+  delay: 0.5
 --- !u!1001 &899066288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22538,6 +22543,7 @@ MonoBehaviour:
   mat: []
   colorCrystal: []
   emptyCrystal: []
+  delay: 0.5
 --- !u!136 &1482598926
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -22813,6 +22819,7 @@ MonoBehaviour:
   cc: {fileID: 0}
   jumpKey: 0
   jumpDelay: 0
+  nextDelay: 0
   nowSpeed: 0
 --- !u!114 &1503507118
 MonoBehaviour:
@@ -25542,8 +25549,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1731624225}
-  - {fileID: 1027916221}
   - {fileID: 578849587}
+  - {fileID: 1027916221}
   - {fileID: 1453541256}
   - {fileID: 318465193}
   - {fileID: 2093793084}
@@ -32544,6 +32551,7 @@ MonoBehaviour:
   mat: []
   colorCrystal: []
   emptyCrystal: []
+  delay: 0.5
   myMat: {fileID: 0}
   isActive: 0
 --- !u!65 &1856540659
@@ -34896,6 +34904,7 @@ MonoBehaviour:
   mat: []
   colorCrystal: []
   emptyCrystal: []
+  delay: 0.5
   myMat: {fileID: 0}
   isActive: 0
 --- !u!65 &1995093600
