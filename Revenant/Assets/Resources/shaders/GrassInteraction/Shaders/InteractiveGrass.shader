@@ -18,6 +18,7 @@
 		///"DisableBatching" = "True" }// disable batching lets us keep object space
         LOD 200
         Blend SrcAlpha OneMinusSrcAlpha
+		Cull Off
 		
        
 CGPROGRAM
