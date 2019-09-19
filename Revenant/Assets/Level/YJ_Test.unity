@@ -4043,7 +4043,7 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: fdb763ef8872dfb4c8fad517036877fe, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ca31bfefd41e94347a5fa479d5ebe08d, type: 2}
+      objectReference: {fileID: 2100000, guid: 0592a9943fa6a4e48b83b74af1db499f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdb763ef8872dfb4c8fad517036877fe, type: 3}
 --- !u!1 &434075157 stripped
@@ -16682,7 +16682,7 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: fdb763ef8872dfb4c8fad517036877fe, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ca31bfefd41e94347a5fa479d5ebe08d, type: 2}
+      objectReference: {fileID: 2100000, guid: 0592a9943fa6a4e48b83b74af1db499f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdb763ef8872dfb4c8fad517036877fe, type: 3}
 --- !u!1 &1746489548
@@ -22239,12 +22239,12 @@ Terrain:
   m_DrawInstanced: 0
   m_DrawTreesAndFoliage: 1
   m_ReflectionProbeUsage: 2
-  m_MaterialType: 0
+  m_MaterialType: 3
   m_LegacySpecular:
     serializedVersion: 2
     rgba: 4286545791
   m_LegacyShininess: 0.078125
-  m_MaterialTemplate: {fileID: 0}
+  m_MaterialTemplate: {fileID: 2100000, guid: 0592a9943fa6a4e48b83b74af1db499f, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_ScaleInLightmap: 0.0512
@@ -22341,7 +22341,7 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: fdb763ef8872dfb4c8fad517036877fe, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ca31bfefd41e94347a5fa479d5ebe08d, type: 2}
+      objectReference: {fileID: 2100000, guid: 0592a9943fa6a4e48b83b74af1db499f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdb763ef8872dfb4c8fad517036877fe, type: 3}
 --- !u!1001 &1960948090
