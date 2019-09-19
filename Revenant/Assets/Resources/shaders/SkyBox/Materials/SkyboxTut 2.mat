@@ -75,7 +75,7 @@ Material:
     - _SecNoiseScale: 0.046
     - _Slider: 0.163
     - _Slider2: 0.098
-    - _Speed: 2.3
+    - _Speed: 0
     - _StarsCutoff: 0.01
     - _StarsSpeed: 0.54
     - _SunRadius: 0.103
