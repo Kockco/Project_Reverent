@@ -7,11 +7,11 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: cliff
+  m_Name: TriPlanarMerging
   m_Shader: {fileID: 4800000, guid: e88347c58329a6f40af1c6f1209376e8, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -40,18 +40,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: e9b3d00f04b005c49a55f3a58e3f6418, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTexBase:
-        m_Texture: {fileID: 2800000, guid: 186704f8799003f46931245ab081bc01, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4e87cfc3cdb6ee84aaa39b63abae7e67, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTexSide:
-        m_Texture: {fileID: 2800000, guid: cf0bae45410a65142bc7f03593ba432c, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Mask:
         m_Texture: {fileID: 2800000, guid: 9d650f376e1910948a4b173ee853e387, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -59,12 +51,8 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Noise:
-        m_Texture: {fileID: 2800000, guid: 50f5bfbaf5f024c409813bdac16a6237, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _Normal:
-        m_Texture: {fileID: 2800000, guid: a7941b867f2d31b4b95f3d46b24e06c5, type: 3}
+        m_Texture: {fileID: 2800000, guid: 888c932c195654b48b748da8196bbe04, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -76,63 +64,40 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Ramp:
-        m_Texture: {fileID: 2800000, guid: d440902fad11e807d00044888d76c639, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SnowRamp:
-        m_Texture: {fileID: 2800000, guid: 62046044576cd904b9519d2a995c7f72, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SparkleNoise:
-        m_Texture: {fileID: 2800000, guid: 799ad8ec365f7074e9482d4e182db6db, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7164ef8dffe0d48478896bfed874c377, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _EdgeWidth: 1
-    - _Edgewidth: 0.1
+    - _DstBlend: 10
+    - _Edge: 1
+    - _Edge2: 1
+    - _Edge3: 0.93
+    - _EdgeWidth: 0.231
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Height: 0.1
-    - _MaxTessDistance: 50
+    - _MergeW: 0.34
+    - _MergeWidth: 0.27
+    - _MergeY: 0.32
     - _Metallic: 0
-    - _Mode: 0
-    - _NoiseScale: 0.05
-    - _NoiseWeight: 0
+    - _Mode: 3
+    - _NoiseScale: -0.12
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RimPower: 0.6
-    - _SUV: 0
-    - _Scale: 1
-    - _SideScale: 1
+    - _RimPower: 20
+    - _Scale: 0.24
+    - _SideScale: -0.32
     - _SmoothnessTextureChannel: 0
-    - _SnowDepth: 0.3
-    - _SnowHeight: 0.0647
-    - _SnowOffset: 0.1
-    - _SnowSize: 0.11
-    - _SnowTextureOpacity: 0.3
-    - _SnowTextureScale: 0.3
-    - _SparkCutoff: 0.1
-    - _SparkleScale: 10
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Tess: 20
-    - _TopSpread: 1
+    - _TopSpread: 0.8
     - _UVSec: 0
-    - _ZWrite: 1
+    - _ZWrite: 0
     m_Colors:
-    - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _Color: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
-    - _EdgeColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 0.10646385}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _PathColor: {r: 0.5, g: 0.5, b: 0.7, a: 1}
-    - _RimColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _RimColor2: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _SnowAngle: {r: 0, g: -1.64, b: 0, a: 3.24}
-    - _SnowColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _TColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _ToonRamp: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _RimColor: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
+    - _RimColor2: {r: 0.36470884, g: 0.35748267, b: 0.41911763, a: 1}
