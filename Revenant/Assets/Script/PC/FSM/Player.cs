@@ -6,7 +6,6 @@ public class Player : MonoBehaviour
 {
     //캐릭터 상태
     public PlayerState currentState;
-
     //이동관련
     public Vector3 move;
     public Transform myTransform;
@@ -22,7 +21,6 @@ public class Player : MonoBehaviour
     //카메라 관련
     public Transform model;
     public Transform cameraTransform;
-    public GameObject staff;
     public Transform aim;
 
     public CharacterController cc;
@@ -35,11 +33,8 @@ public class Player : MonoBehaviour
     public float nowSpeed;
     private void Awake()
     {
-        //상태변경, 스태프 찾아오기
+        //상태변경
         SetState(new PlayerIdleState());
-        staff = GameObject.Find("Staff");
-        if (staff == null)
-            Debug.Log("PlayerScript Error : staff not find");
         cc = GetComponent<CharacterController>();
         model = transform.GetChild(0);
         cameraTransform = Camera.main.transform.parent;
@@ -49,10 +44,13 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        //state Update
+        //currentState 업데이트 돌리기
         currentState.Update();
+
+        // 현재 움직이는 속도
         nowSpeed = new Vector3(cc.velocity.x, 0, cc.velocity.z).magnitude;
 
+        //앞전 딜 
         //if (nextDelay <= 0.3f)
             nextDelay += Time.deltaTime;
         if ((!jumpKey || move.y < -0.5f) && nextDelay > 0.3f)
@@ -73,11 +71,6 @@ public class Player : MonoBehaviour
     
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.transform.position.y < transform.position.y)
-        {
-            //Debug.Log("충돌됨");
-            //yVelocity = 0;
-        }
     }
 
     public void MoveCalc(float ratio)
@@ -88,6 +81,7 @@ public class Player : MonoBehaviour
         //대각선 이동이 루트2 배의 속도를 갖는 것을 막기위해 속도가 1 이상 된다면 노말라이즈 후 속도를 곱해 어느 방향이든 항상 일정한 속도가 되게 한다.
         float inputMoveXZMgnitude = inputMoveXZ.sqrMagnitude; //sqrMagnitude연산을 두 번 할 필요 없도록 따로 저장
         inputMoveXZ = myTransform.TransformDirection(inputMoveXZ);
+
         if (inputMoveXZMgnitude <= 1)
             inputMoveXZ *= runSpeed;
         else
@@ -153,13 +147,7 @@ public class Player : MonoBehaviour
     }
     
     public void PlayerAnimation(string aniName) { model.GetComponent<Animator>().SetTrigger(aniName); }
-
-    //스태프의 getset
-    public C_STATE GetStaffState() { return staff.GetComponent<PlayerStaff>().GetState(); }
-    public int GetStaffCryNumber() { return staff.GetComponent<PlayerStaff>().GetCrystalNum(); }
-    public void ChangeStaffNum(int num) { staff.GetComponent<PlayerStaff>().ChangeNum(num); }
-    public void ChangeStaffMaterial() { staff.GetComponent<PlayerStaff>().ChangeMaterial(); }
-    public void ChangeStaffMaterial(Material mat) { staff.GetComponent<PlayerStaff>().ChangeMaterial(mat); }
-    public void ChangeStaffState(C_STATE state) { staff.GetComponent<PlayerStaff>().ChangeState(state); }
+    public void PlayerAnimation(string aniName,bool b) { model.GetComponent<Animator>().SetBool(aniName,b); }
+    public void PlayerAnimation(string aniName, float f) { model.GetComponent<Animator>().SetFloat(aniName, f); }
 
 }

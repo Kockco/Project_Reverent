@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class ColorCrystal : CrystalState
 {
-   
-    // Start is called before the first frame update
-    void Start()
+    //클리어가 됬는지 안됬는지 확인
+    private bool isClear = false;
+
+    public bool IsClear
     {
-        //마테리얼 미리 리소스 로드
-        //LoadMaterial(transform.GetChild(0).gameObject,2,state);
-        if (myNum <= 0)
-        {
-            Debug.Log(transform.name + " number none");
-        }
+        get;
+        set;
+     }
+
+    private void Start()
+    {
+        LoadMaterial();
     }
+   
 }
