@@ -9,37 +9,37 @@ public class CrystalMove : CrystalPuzzle
     public Vector3 target;
 
     public int init = 0;//빈거로 초기화 안하려면 1번
+
     private void Start()
     {
         c_state = GetComponent<EmptyCrystal>();
         if(init == 0)
             c_state.state = C_STATE.EMPTY;
         
-
         pos = new Vector3[5];
         for(int i = 0; i <5; i++)
         {
             pos[i] = transform.position;
         }
-        pos[0].z += pos2[0].z;
-        pos[1].z += pos2[1].z;
-        pos[2].x += pos2[2].x;
-        pos[3].x += pos2[3].x;
+        pos[0] += pos2[0];
+        pos[1] += pos2[1];
+        pos[2] += pos2[2];
+        pos[3] += pos2[3];
         target = pos[4];
     }
     private void Update()
     {
-        if (c_state.isActive && transform.GetComponent<EmptyCrystal>().delay >0.8f)
+        if (c_state.isActive)
         {
             if (transform.position == pos[4] && c_state.state != C_STATE.EMPTY)
             {
                 TargetPosChange();
             }
-            else if (transform.position != pos[4]  && c_state.state == C_STATE.EMPTY)
+            else if (transform.position != pos[4] && c_state.state == C_STATE.EMPTY)
             {
                 target = pos[4];
             }
-            //중앙이 아닐때는 중앙으로 /중앙 포지션과는 비슷해지면 초기화
+            //중앙이 아닐때는 중앙으로 / 중앙 포지션과는 비슷해지면 초기화
             if (((target.z - transform.position.z) < 0.1f && (target.z - transform.position.z) > -0.1f)
                 && ((target.x - transform.position.x) < 0.1f && (target.x - transform.position.x) > -0.1f))
             {
@@ -52,7 +52,7 @@ public class CrystalMove : CrystalPuzzle
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (c_state.isActive && transform.GetComponent<EmptyCrystal>().delay > 0.8f)
+        if (c_state.isActive)
             transform.position = Vector3.Lerp(transform.position, target, Time.fixedDeltaTime * 2f);
     }
 
@@ -82,7 +82,8 @@ public class CrystalMove : CrystalPuzzle
         if ((target == transform.position && c_state.state != C_STATE.EMPTY && target != pos[4]) ||
             (transform.position == pos[4] && c_state.state == C_STATE.EMPTY))
         {
-            c_state.isActive = false; target = pos[4];
+            c_state.isActive = false;
+            target = pos[4];
         }
     }
 }

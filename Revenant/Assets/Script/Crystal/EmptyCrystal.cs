@@ -6,11 +6,11 @@ public class EmptyCrystal : CrystalState
 {
     public MeshRenderer myMat;
     public bool isActive;
-    // Start is called before the first frame update
+
     void Start()
     {
         LoadMaterial();
-            myMat = transform.GetChild(0).GetComponent<MeshRenderer>();
+        myMat = transform.GetChild(0).GetComponent<MeshRenderer>();
 
 
         isActive = false;
@@ -20,14 +20,8 @@ public class EmptyCrystal : CrystalState
             Debug.Log(transform.name + " number none");
         }
     }
-
-    // Update is called once per frame
     void Update()
     {
-        if (delay <= 0.8f)
-            delay += Time.deltaTime;
-
-        if(delay > 0.8f)
         ChangeMat();
     }
     public void ChangeMat()
