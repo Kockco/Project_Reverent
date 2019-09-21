@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Crystal_White
-  m_Shader: {fileID: 4800000, guid: fbc0807e2e1bbb94d96cab3e6c5d94f9, type: 3}
+  m_Shader: {fileID: 4800000, guid: bc8ccb75ecb64c948a10a511ee77c79f, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -68,7 +68,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Ramp:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 4a056241e2722dc46a7262a8e7073fd9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -99,7 +99,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BottomColor: {r: 0.75133497, g: 0.7893339, b: 0.7924528, a: 1}
-    - _Color: {r: 1.3501086, g: 1.3501086, b: 1.3501086, a: 1}
+    - _Color: {r: 0.3436387, g: 0.6415094, b: 0.23300104, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _IrColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _TColor: {r: 0.4174528, g: 0.48520356, b: 0.5, a: 1}
+    - _TColor: {r: 0.2836261, g: 0.3301887, b: 0.26633143, a: 1}
