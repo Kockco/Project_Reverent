@@ -1,18 +1,11 @@
-﻿Shader "Masked/Mask" {
+﻿Shader "FX/Mask" {
 
 	SubShader{
-		// Render the mask after regular geometry, but before masked geometry and
-		// transparent things.
-
-		Tags{ "Queue" = "Transparent"  "IgnoreProjector" = "True" }
-
-		// Don't draw in the RGBA channels; just the depth buffer
+		Tags{ "Queue" = "Transparent-1"  "IgnoreProjector" = "True" }
 
 		ColorMask 0
 		ZWrite On
-
-		// Do nothing specific in the pass:
-
 		Pass{}
 	}
+	
 }
