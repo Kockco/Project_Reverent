@@ -21,7 +21,11 @@ public class PlayerIdleState : PlayerState
             player.yVelocity = 0;
         }
 
+<<<<<<< HEAD
+        if (player.nowSpeed == 0)
+=======
         if(player.nowSpeed == 0)
+>>>>>>> 03286cbb457f9c3faad8182c072975dd7478c23b
         {
             player.transform.GetChild(0).GetComponent<Animator>().SetBool("idle", true);
             player.transform.GetChild(0).GetComponent<Animator>().SetBool("move", false);
@@ -31,8 +35,13 @@ public class PlayerIdleState : PlayerState
             player.transform.GetChild(0).GetComponent<Animator>().SetBool("idle", false);
             player.transform.GetChild(0).GetComponent<Animator>().SetBool("move", true);
         }
+<<<<<<< HEAD
+        player.MoveCalc(1.0f);
+        
+=======
 
         //player.move.y -= player.gravity * Time.deltaTime;
+>>>>>>> 03286cbb457f9c3faad8182c072975dd7478c23b
         if (jumpDelay < 0.2f)
         {
             player.jumpKey = false;
@@ -41,7 +50,10 @@ public class PlayerIdleState : PlayerState
         }
         else
         {
+<<<<<<< HEAD
+=======
             player.MoveCalc(1.0f);
+>>>>>>> 03286cbb457f9c3faad8182c072975dd7478c23b
             player.Jump();
         }
         player.Gravity();

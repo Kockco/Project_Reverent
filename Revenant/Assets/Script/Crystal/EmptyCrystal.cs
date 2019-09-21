@@ -15,9 +15,15 @@ public class EmptyCrystal : CrystalState
 
         isActive = false;
 
+<<<<<<< HEAD
+        if (myNum != 0)
+        {
+            Debug.Log(transform.name + " number is not 0");
+=======
         if (myNum <= 0)
         {
             Debug.Log(transform.name + " number none");
+>>>>>>> 03286cbb457f9c3faad8182c072975dd7478c23b
         }
     }
     void Update()

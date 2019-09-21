@@ -8,9 +8,15 @@ public class MouseEvent : MonoBehaviour
     PlayerStaff staff;
     PlayerAimState aim;
     GameObject cam;
+<<<<<<< HEAD
+
+    public float maxAimDistance = 10;
+
+=======
     public GameObject[] emptyCrystal;
     public int emptyCrystalLenght;
     public float maxAimDistance = 10;
+>>>>>>> 03286cbb457f9c3faad8182c072975dd7478c23b
     void Awake()
     {
         player = GameObject.Find("PC").GetComponent<Player>();
@@ -49,38 +55,64 @@ public class MouseEvent : MonoBehaviour
         // Physics.SphereCast (레이저를 발사할 위치, 구의 반경, 발사 방향, 충돌 결과, 최대 거리, 충돌할 레이어)
         bool isHit = Physics.SphereCast(aim.transform.position, aim.transform.transform.lossyScale.x / 2, aim.transform.transform.forward, out hit, maxAimDistance, layerMask);
         
+<<<<<<< HEAD
+=======
         Gizmos.color = Color.red;
+>>>>>>> 03286cbb457f9c3faad8182c072975dd7478c23b
         if (isHit)
         {
             if (hit.transform.tag == "Empty_Crystal") // 에임과 충돌한것->내스테프와 같은것
             {
                 EmptyCrystal hitCrystal = hit.transform.GetComponent<EmptyCrystal>();
 
+<<<<<<< HEAD
+                if (!hitCrystal.isActive && !hitCrystal.IsLink
+                    && staff.State != C_STATE.EMPTY && !hitCrystal.IsClear) //크리스탈 비활성화/링크가 되있지 않을때(엠티)/스태프가 색이 있다면 크리스탈만 변경
+=======
                 if (!hitCrystal.isActive && !hitCrystal.isLink
                     && staff.State != C_STATE.EMPTY) //크리스탈 비활성화/링크가 되있지 않을때(엠티)/스태프가 색이 있다면 크리스탈만 변경
+>>>>>>> 03286cbb457f9c3faad8182c072975dd7478c23b
                 {
                     //링크 해제
                     foreach (var i in CrystalManager.Instance.crystal)
                     {
                         if (i.GetComponent<CrystalState>().myNum == staff.CrystalNum)
+<<<<<<< HEAD
+                            i.GetComponent<CrystalState>().IsLink = true;
+                    }
+                    //크리스탈만 색을 넣고 스태프는 기본으로 초기화
+                    hitCrystal.isActive = true;
+                    hitCrystal.IsLink = true;
+=======
                             i.GetComponent<CrystalState>().isLink = true;
                     }
                     //크리스탈만 색을 넣고 스태프는 기본으로 초기화
                     hitCrystal.isActive = true;
                     hitCrystal.isLink = true;
+>>>>>>> 03286cbb457f9c3faad8182c072975dd7478c23b
                     hitCrystal.myNum = staff.CrystalNum; //저장되있던 스태프와 Link되있는 넘버정보를 넘김
                     hitCrystal.state = staff.State; // 저장되있던 스태프 상태를 넘김(크리스탈색바뀜)
                     PlayerCrystalReset();
                 }
+<<<<<<< HEAD
+                else if (!hitCrystal.isActive && hitCrystal.IsLink && !hitCrystal.IsClear) //크리스탈 비활성화/링크가 되있을때는 링크가 된(색이있음) 녀석을 찾아서 풀고 변경
+=======
                 else if (!hitCrystal.isActive && hitCrystal.isLink) //크리스탈 비활성화/링크가 되있을때는 링크가 된(색이있음) 녀석을 찾아서 풀고 변경
+>>>>>>> 03286cbb457f9c3faad8182c072975dd7478c23b
                 {
                     //링크 해제
                     foreach (var i in CrystalManager.Instance.crystal)
                     {
                         if (i.GetComponent<CrystalState>().myNum == hitCrystal.myNum)
+<<<<<<< HEAD
+                            i.GetComponent<CrystalState>().IsLink = false;
+                        if (i.GetComponent<CrystalState>().myNum == staff.CrystalNum)
+                            i.GetComponent<CrystalState>().IsLink = true;
+=======
                             i.GetComponent<CrystalState>().isLink = false;
                         if (i.GetComponent<CrystalState>().myNum == staff.CrystalNum)
                             i.GetComponent<CrystalState>().isLink = true;
+>>>>>>> 03286cbb457f9c3faad8182c072975dd7478c23b
                     }
                     //마테리얼을 서로 교체해줌
                     hitCrystal.isActive = true;
@@ -88,13 +120,21 @@ public class MouseEvent : MonoBehaviour
                     {
                         staff.CrystalNum = hitCrystal.myNum; //빈크리스탈과 Link되잇는 넘버정보넘김
                         staff.State = hitCrystal.state; //빈크리스탈의 상태를 스태프에게 전달(마테리얼도 변경됨)
+<<<<<<< HEAD
+                        hitCrystal.IsLink = false;
+=======
                         hitCrystal.isLink = false;
+>>>>>>> 03286cbb457f9c3faad8182c072975dd7478c23b
                         hitCrystal.myNum = 88; //저장되있던 스태프와 Link되있는 넘버정보를 넘김
                         hitCrystal.state = C_STATE.EMPTY; // 저장되있던 스태프 상태를 넘김(크리스탈색바뀜)
                     }
                     else//크리스탈 색없애고 스태프의 크리스탈 색 넣기
                     {
+<<<<<<< HEAD
+                        hitCrystal.IsLink = true;
+=======
                         hitCrystal.isLink = true;
+>>>>>>> 03286cbb457f9c3faad8182c072975dd7478c23b
                         hitCrystal.myNum = staff.CrystalNum; //저장되있던 스태프와 Link되있는 넘버정보를 넘김
                         hitCrystal.state = staff.State; // 저장되있던 스태프 상태를 넘김(크리스탈색바뀜)
                         PlayerCrystalReset();
@@ -104,7 +144,11 @@ public class MouseEvent : MonoBehaviour
             else if (hit.transform.tag == "Crystal")
             {
                 ColorCrystal hitCrystal = hit.transform.GetComponent<ColorCrystal>();
+<<<<<<< HEAD
+                if (!hitCrystal.IsLink && !hitCrystal.IsClear)
+=======
                 if (!hitCrystal.isLink && !hitCrystal.IsClear)
+>>>>>>> 03286cbb457f9c3faad8182c072975dd7478c23b
                 {
                     //완전체 크리스탈의 정보를 스태프로 가져옴
                     staff.CrystalNum = hitCrystal.myNum;
@@ -115,6 +159,10 @@ public class MouseEvent : MonoBehaviour
             {
             }
         }
+<<<<<<< HEAD
+        staff.ChangeMaterial();
+=======
+>>>>>>> 03286cbb457f9c3faad8182c072975dd7478c23b
     }
     void PlayerCrystalReset(bool animationPlay = false)
     {
